@@ -21,9 +21,9 @@
 					<li>彩种：<span  >{{mes.gameName}}<span v-if="mes.type==2"  >-{{mes.groupName}}</span></span></li>
 					<li v-if="!mes.show">玩法：<span  >{{mes.betType}}</span></li>
 					<li>出票状态：<span class="changeCol"  >{{mes.ticketStatus==1?'出票成功':'出票中'}}</span></li>
-					<li>投注金额：<span  >{{mes.amount}}{{coinUnit}}</span></li>
-					<li v-if="mes.type!=2">预计奖金：<span  >{{mes.expectBonuses}}{{coinUnit}}</span></li>
-					<li>中奖金额：
+					<li>{{$t('投注金额')}}：<span  >{{mes.amount}}{{coinUnit}}</span></li>
+					<li v-if="mes.type!=2">{{$t('预计奖金')}}：<span  >{{mes.expectBonuses}}{{coinUnit}}</span></li>
+					<li>{{$t('中奖金额')}}：
 						<span v-if="mes.isCal==1">
 							<span v-if="mes.status==1" class="changeCol">{{mes.bonus}}<span v-if="mes.type!=2"  >{{coinUnit}}</span></span>
 							<span v-else-if="mes.status==0" style="color: green;">{{$t('未中奖')}}</span>

@@ -48,11 +48,11 @@
 						</div>
             <!-- <p class="userInfo">
               <span>
-                账号：
+                {{$t('账号')}}：
                 <em id="userName">{{userName}}</em>
               </span>
               <span v-cloak>
-                可用余额：
+                {{$t('可用余额')}}：
                 <em id="balance">{{balance}}</em>
                 {{coinUnit}}
               </span>

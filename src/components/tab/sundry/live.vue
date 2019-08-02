@@ -52,7 +52,7 @@
 					<ul class="wanfa-ul">
 						<li id="wan1" @click="select_wanfa('wan1')" class="bb">{{$t('竞彩足球')}}</li>
 						<li id="wan2" @click="select_wanfa('wan2')">{{$t('足球单场')}}</li>
-						<!-- <li id="wan3" @click="select_wanfa('wan3')">胜负彩</li> -->
+						<!-- <li id="wan3" @click="select_wanfa('wan3')">{{$t('胜负彩')}}</li> -->
 						<li id="wan4" @click="select_wanfa('wan4')">{{$t('竞彩篮球')}}</li>
 					</ul>
 				</div>

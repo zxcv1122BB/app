@@ -9,9 +9,9 @@
 				</header>
 				<div class="content">
 					<div class="cImg">
-						<div class="tit">Line官方客服</div>
+						<div class="tit">Line{{$t('官方客服')}}</div>
 						<img src="/static/images/L.png" alt="">
-						<p class="c_gray">SSG娱乐 Line官方客服 </p>
+						<p class="c_gray">SSG娱乐 Line{{$t('官方客服')}} </p>
 					</div>
 					
 				</div>

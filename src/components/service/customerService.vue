@@ -13,7 +13,7 @@
                 <img src="../../assets/images/customer_qq.png" alt="">
             </div>
             <div class="rbox">
-                <p class="text_t">请添加QQ客服</p>
+                <p class="text_t">{{$t('请添加')}}QQ{{$t('客服')}}</p>
                 <p style="color: #FFFFFF;" @click="popQQimg">{{$t('点击扫码')}}</p>
                 <p class="text_b" style="line-height: 2rem;">
                 	<span id="aaa" @click="lianxiqq(datas.qqSys_config2)" v-cloak>QQ: {{datas.qqSys_config2}}</span>
@@ -32,7 +32,7 @@
                 <p class="text_t">{{$t('请添加微信在线')}}</p>
                 <p style="color: #FFFFFF;" @click="popWximg">{{$t('点击扫码')}}</p>
               	<p class="text_b" style="line-height: 2rem;">
-                	<span id="bbb" v-cloak >微信:{{datas.weixinSys_config2}}</span>
+                	<span id="bbb" v-cloak >{{$t('微信')}}:{{datas.weixinSys_config2}}</span>
                 	<span type="button"
 							     v-clipboard:copy="datas.weixinSys_config2"
 							     v-clipboard:success="onCopy"

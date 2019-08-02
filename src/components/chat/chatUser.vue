@@ -5,7 +5,7 @@
 				<header id="header">
 					<span class="goBack" href="javascript:void(0)" @click="routerBack"></span>
 					<h1>
-						聊天室成员
+						{{$t('聊天室成员')}}
 					</h1>
 				</header>
 				<article id="chatUser">
@@ -16,7 +16,7 @@
 					</div>
 					<div v-if="onlineAdmin.length!=0">
 						<p>
-							<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAjZJREFUeNrsV81xgkAURsaZXEkHnHPCCiSTBrCCQAViBWoFmgrUCtQCMtJByCVXKYFrbnkv863zXFmBxeSSvJkdkH37fr73tzrOX6ee7cGP1zufHj5+Fg9Pn4WNHLeD8TGtA1ZsK6SLAZnh/WdDQNCH9JjS8mgF+JzTKmnNKRTZbyAQCuUO3kMbQf0WXitPOdkSWiuNbYK9E38TNHpXlHqAOtW2FNxhRU54GjJMS4SmbIvA1gBrcCUsVZTizGMtAvA6QH2vbtxzEvSL7MIAUsxKFzWJlIs4+whPKOCfi73FFaQUf8LNqwevj4ifiVjwQMaRzs1ghIMYzzQk30SnrCKWNXBhrVcD38aURFUE3k0N23eSswFRhWW7BnqGhncT7SBbUuRWeD9CPG9Nc8g+Q6FfAV+GOBYihkMLhfIMZ38OuRet2AT3i6xxjN82ozo0yDoLCxuw1w7HQGKpWqsYv21GtfR+KWUL2ru0uUaNK3rW8kHRuAkK4BkbZEjZOet2RZeScKdAIRd7Hkq2jmRZJyL2qRaW5DSOwTQRm1N0RwcIrVXZ0PfoivexKOs1zqpOO5WTUxmmz4KViB8zPHJTAaxbtNcSe4HwtMBS33h/xK0WXfEgWjMblhjHsWaESkLfsvb182fKjfcBrc/frBHJedHkQhJhJHsdFZdIxl3rSymuVoeOBoxMyhvdismIY4ccKEn5fddL6Qb5wF684zJx8U9I3KYCzIFIlK89sWAItzrr/FMNfQkwAJi12pjgiYaZAAAAAElFTkSuQmCC" /> 在线管理/客服
+							<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAjZJREFUeNrsV81xgkAURsaZXEkHnHPCCiSTBrCCQAViBWoFmgrUCtQCMtJByCVXKYFrbnkv863zXFmBxeSSvJkdkH37fr73tzrOX6ee7cGP1zufHj5+Fg9Pn4WNHLeD8TGtA1ZsK6SLAZnh/WdDQNCH9JjS8mgF+JzTKmnNKRTZbyAQCuUO3kMbQf0WXitPOdkSWiuNbYK9E38TNHpXlHqAOtW2FNxhRU54GjJMS4SmbIvA1gBrcCUsVZTizGMtAvA6QH2vbtxzEvSL7MIAUsxKFzWJlIs4+whPKOCfi73FFaQUf8LNqwevj4ifiVjwQMaRzs1ghIMYzzQk30SnrCKWNXBhrVcD38aURFUE3k0N23eSswFRhWW7BnqGhncT7SBbUuRWeD9CPG9Nc8g+Q6FfAV+GOBYihkMLhfIMZ38OuRet2AT3i6xxjN82ozo0yDoLCxuw1w7HQGKpWqsYv21GtfR+KWUL2ru0uUaNK3rW8kHRuAkK4BkbZEjZOet2RZeScKdAIRd7Hkq2jmRZJyL2qRaW5DSOwTQRm1N0RwcIrVXZ0PfoivexKOs1zqpOO5WTUxmmz4KViB8zPHJTAaxbtNcSe4HwtMBS33h/xK0WXfEgWjMblhjHsWaESkLfsvb182fKjfcBrc/frBHJedHkQhJhJHsdFZdIxl3rSymuVoeOBoxMyhvdismIY4ccKEn5fddL6Qb5wF684zJx8U9I3KYCzIFIlK89sWAItzrr/FMNfQkwAJi12pjgiYaZAAAAAElFTkSuQmCC" /> 在线管理/{{$t('客服')}}
 						</p>
 						<ul v-for="item in onlineAdmin">
 							<li><img src="../../assets/images/chat/m_ico3.gif" /></li>

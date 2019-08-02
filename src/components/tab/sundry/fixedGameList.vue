@@ -1,7 +1,7 @@
 <template>
     <div id="fixedGameList" style="display: none">
       <div class="rightTitle" @click="showFixedGameList()">
-        更多彩种
+        {{$t('更多彩种')}}
       </div>
       <div style="disPlay:none" class="hiddenClick" @click="getFixedGameList()"></div>
       <div class="rightGameList">

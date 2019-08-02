@@ -51,7 +51,7 @@
                 <!-- {{datas.openNo}} -->
               </div>
               <div style="color: #37a29f;" v-else>
-                  未开奖
+                  {{$t('未开奖')}}
               </div>
             </div>
             
@@ -101,7 +101,7 @@
                 <li style="color: gray;font-size: 1rem;">第{{datas.actionIssue}}期</li>
                 <li style="font-size: 1.2rem;" v-if="datas.isCal==0">
                   <span v-if="datas.status==2" style="color: gray;">{{$t('该订单已撤销')}}</span>
-                  <span v-else style="color: red;">未开奖...</span>
+                  <span v-else style="color: red;">{{$t('未开奖')}}...</span>
                 </li>
                 <li style="color: gray;font-size: 1.3rem;" v-else-if="datas.isCal==1">
                   {{datas.status==0?"没有中奖再接再厉":(datas.status==2?"该订单已撤销":"")}}

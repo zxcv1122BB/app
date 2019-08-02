@@ -33,7 +33,7 @@
                   </div>
                   <div class="hb_center" v-cloak>
                     <p>{{(hbList[list.i].redPacketTitle)?hbList[list.i].redPacketTitle:""}}</p>
-                    <p>总额：{{(hbList[list.i].redPacketMoney)?hbList[list.i].redPacketMoney:"-"+coinUnit}}</p>
+                    <p>{{$t('总额')}}：{{(hbList[list.i].redPacketMoney)?hbList[list.i].redPacketMoney:"-"+coinUnit}}</p>
                   <p >{{$t('已开抢')}}</p>
                   </div>
                   <div class="hb_right">
@@ -47,7 +47,7 @@
                     </div>
                     <div class="hb_center">
                       <p>{{(item.redPacketTitle) ? item.redPacketTitle : ""}}</p>
-                      <p>总额：{{(item.redPacketMoney) ? item.redPacketMoney : "-"}}${{coinUnit}}</p>
+                      <p>{{$t('总额')}}：{{(item.redPacketMoney) ? item.redPacketMoney : "-"}}${{coinUnit}}</p>
                     <p >{{$t('已结束')}}</p>
                     </div>
                     <div class="hb_right">
@@ -60,7 +60,7 @@
                     </div>
                     <div class="hb_center" v-cloak>
                       <p>{{(item.redPacketTitle)?item.redPacketTitle:""}}</p>
-                      <p>总额：{{(item.redPacketMoney)?item.redPacketMoney:"-"+coinUnit}}</p>
+                      <p>{{$t('总额')}}：{{(item.redPacketMoney)?item.redPacketMoney:"-"+coinUnit}}</p>
                     <p >{{$t('已开抢')}}</p>
                     </div>
                     <div class="hb_right">
@@ -74,7 +74,7 @@
 						       		</div>
 						       		<div class="hb_center">
 						       			<p>{{(item.redPacketTitle)?item.redPacketTitle:"-"}}</p>
-						       			<p>总额：{{(item.redPacketMoney)?item.redPacketMoney:"-"}}{{coinUnit}}</p>
+						       			<p>{{$t('总额')}}：{{(item.redPacketMoney)?item.redPacketMoney:"-"}}{{coinUnit}}</p>
 						       		<p :id="(item.redPacketKey)?item.redPacketKey:'-'">{{obj.getRTime}}</p>
 						       		</div>
 						       		<div class="hb_right">
@@ -87,7 +87,7 @@
                     </div>
                     <div class="hb_center">
                       <p>{{(obj.redPacketTitle)?obj.redPacketTitle:'-'}}</p>
-                      <p>总额：{{(obj.redPacketMoney)?obj.redPacketMoney:'-'}}{{coinUnit}}</p>
+                      <p>{{$t('总额')}}：{{(obj.redPacketMoney)?obj.redPacketMoney:'-'}}{{coinUnit}}</p>
                     <p :id="(item.redPacketKey)?item.redPacketKey:'-'">{{obj.getRTime}}</p>
                     </div>
                     <div class="hb_right">

@@ -7,9 +7,9 @@
 		    <h1>{{$t('中奖记录')}}</h1>
 		</header>
 	    <div class="title">
-	        <p>用户名</p><!--
-	        --><p>中奖金额</p><!--
-	        --><p>彩种类</p>
+	        <p>{{$t('用户名')}}</p><!--
+	        --><p>{{$t('中奖金额')}}</p><!--
+	        --><p>{{$t('彩种类')}}</p>
 	    </div>
 	    <div class="inner">
 	        <ul>
@@ -18,9 +18,9 @@
 	                    <img src="../../assets/images/jiangpai.png"/>
 	                    <span v-cloak>{{item.user_name}}</span>
 	                </p>
-	                <p v-cloak v-if="item.type !=2 ">喜中{{item.bonus}}{{coinUnit}}</p>
-	                <p v-cloak v-else>喜中{{item.action_date_result}}</p>
-	                <p v-cloak>购买{{item.type_name}}</p>
+	                <p v-cloak v-if="item.type !=2 ">{{$t('喜中')}}{{item.bonus}}{{coinUnit}}</p>
+	                <p v-cloak v-else>{{$t('喜中')}}{{item.action_date_result}}</p>
+	                <p v-cloak>{{$t('购买')}}{{item.type_name}}</p>
 	            </li>
 	        </ul>
 

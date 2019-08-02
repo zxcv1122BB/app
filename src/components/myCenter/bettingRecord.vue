@@ -84,7 +84,7 @@
 						</ul> -->
 						<div :class="item.isCal==1&&item.status==1?'sbtn btn_suc':'sbtn btn_fal'"></div>
 						<ul>
-							<!-- <li v-cloak>投注金额：<span v-cloak>{{item.amount}}</span>{{coinUnit}}</li> -->
+							<!-- <li v-cloak>{{$t('投注金额')}}：<span v-cloak>{{item.amount}}</span>{{coinUnit}}</li> -->
 							<li style="margin-top: 2rem;">
 								<span v-if="item.isCal==1&&item.status==1" class="coin">+¥{{item.bonus}}</span>
 								<!-- <span v-if="item.isCal==1&&item.status==1" class="coin">+¥{{item.bonus}}<em v-if="item.type!=2">{{coinUnit}}</em></span> -->
@@ -105,7 +105,7 @@
 						<li><span v-cloak>{{item.actionTime}}</span></li>
 					</ul>
 					<ul>
-						<li v-cloak>投注金额：<span v-cloak>{{item.amount}}</span>{{coinUnit}}</li>
+						<li v-cloak>{{$t('投注金额')}}：<span v-cloak>{{item.amount}}</span>{{coinUnit}}</li>
 						<li>
 							<span v-if="item.isCal==1&&item.status==1" v-cloak style="color: red;">{{item.bonus}}<em v-if="item.type!=2">{{coinUnit}}</em></span>
 							<span v-else-if="item.isCal==0" v-cloak>{{item.status==2?"已撤单":"未开奖"}}</span>

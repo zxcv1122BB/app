@@ -56,7 +56,7 @@
           </div>
           <div class="showRecordData" v-if="status==0">
             <ul v-if="recordData.lenght!==0">
-              <li v-for="item in recordData">
+              <li v-for="(item, index) in recordData" :key="index">
                 <div class="grey"><span class="betName">{{item.user_name?item.user_name:$t('沙发客')}}</span><span class="bonus">{{item.amount+coinUnit}}</span></div>
                 <div class="grey">{{item.sourceTime?item.sourceTime:''}}</div>
                 <div class="betResult" :style="item.status==1?'top:.6rem':''">

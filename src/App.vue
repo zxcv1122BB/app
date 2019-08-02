@@ -18,7 +18,7 @@
       </div>
     </div> -->
 
-    <div id="mLoading" class="loading-wrap hide"><div class="dots-loading-container"><div class="dot dot-a"></div><div class="dot dot-b"></div><div class="dot dot-c"></div><div class="dot dot-d"></div><div class="text">正在加载中...</div></div></div>
+    <div id="mLoading" class="loading-wrap hide"><div class="dots-loading-container"><div class="dot dot-a"></div><div class="dot dot-b"></div><div class="dot dot-c"></div><div class="dot dot-d"></div><div class="text">{{$t('正在加载中')}}...</div></div></div>
   </div>
 
 </template>

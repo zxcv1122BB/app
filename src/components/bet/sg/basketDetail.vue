@@ -252,7 +252,7 @@
                                               <span class="tex">
                                                   <span>{{gameBasicInfo.home_name_sc}}</span>
                                                   <span>{{history_win}}胜{{history_lose}}负，</span>
-                                                  <span>场均总分{{history_total}}分，场均分差{{history_gap}}分</span>
+                                                  <span>{{$t('场均总分')}}{{history_total}}分，{{$t('场均分差')}}{{history_gap}}分</span>
                                               </span>
                                               </p>
                                               <table class="history">
@@ -304,7 +304,7 @@
                                                       <span class="tex">
                                                           <span>{{gameBasicInfo.home_name_sc}}</span>
                                                           <span>{{home_win}}胜{{home_lose}}负，</span>
-                                                          <span>场均总分{{home_total}}分，场均分差{{home_lose}}分</span>
+                                                          <span>{{$t('场均总分')}}{{home_total}}分，{{$t('场均分差')}}{{home_lose}}分</span>
                                                       </span>
                                                   </p>
                                                   <table>
@@ -344,7 +344,7 @@
                                                       <span class="tex">
                                                           <span>{{gameBasicInfo.visiting_name_sc}}</span>
                                                           <span>{{away_win}}胜{{away_lose}}负，</span>
-                                                          <span>场均总分{{away_total}}分，场均分差{{away_gap}}分</span>
+                                                          <span>{{$t('场均总分')}}{{away_total}}分，{{$t('场均分差')}}{{away_gap}}分</span>
                                                       </span>
                                                   </p>
                                                   <table>
@@ -700,7 +700,7 @@
               </div>
               <!-- 加载数据时的遮罩层 -->
               <div class="mask" v-show="flag">
-                  <p>正在加载中，请稍后...</p>
+                  <p>{{$t('正在加载中')}}，{{$t('请稍后')}}...</p>
               </div>
           </div>
         </div>

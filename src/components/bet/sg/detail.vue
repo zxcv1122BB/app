@@ -45,7 +45,7 @@
 				</div>
 			</div>
 			<!-- <div class="no_data" v-if="noData">
-						没有数据
+						{{$t('没有数据')}}
 					</div> -->
 			<!--主要内容-->
 			<!-- <div class="nav" v-else> -->
@@ -130,9 +130,9 @@
 											</p>
 											<!--受伤球员信息--默认隐藏-->
 											<div class="detail">
-												<p>国际：西班牙 年龄：29</p>
-												<p>受伤类型：大腿肌肉拉伤</p>
-												<p>出场数据：出赛0场，首发0场</p>
+												<p>{{$t('国际')}}：西班牙 年龄：29</p>
+												<p>{{$t('受伤类型')}}：{{$t('大腿肌肉拉伤')}}</p>
+												<p>{{$t('出场数据')}}：{{$t('出赛')}}0场，{{$t('首发')}}0场</p>
 											</div>
 										</div>
 										<p class="team_name" style="color:green;">{{datas.awayTeamName}}</p>
@@ -153,9 +153,9 @@
 											</p>
 											<!--受伤球员信息--默认隐藏-->
 											<div class="detail">
-												<p>国际：西班牙 年龄：29</p>
-												<p>受伤类型：大腿肌肉拉伤</p>
-												<p>出场数据：出赛0场，首发0场</p>
+												<p>{{$t('国际')}}：西班牙 年龄：29</p>
+												<p>{{$t('受伤类型')}}：{{$t('大腿肌肉拉伤')}}</p>
+												<p>{{$t('出场数据')}}：{{$t('出赛')}}0场，{{$t('首发')}}0场</p>
 											</div>
 										</div>
 									</div>
@@ -255,7 +255,7 @@
 								<p class="zhanji-title" v-if="recentHistoryList.length">
 									<span>
 										<em class="blackDot"></em>
-									</span>近{{recentHistoryList.length}}场交战,{{datas.homeTeamName}}{{r_win}}胜{{r_draw}}平{{r_lose}}负 ; 主场 {{r_hwin}}胜{{r_hdraw}}平{{r_hlose}}负</p>
+									</span>近{{recentHistoryList.length}}{{$t('场交战')}},{{datas.homeTeamName}}{{r_win}}{{$t('胜')}}{{r_draw}}平{{r_lose}}负 ; 主场 {{r_hwin}}{{$t('胜')}}{{r_hdraw}}平{{r_hlose}}负</p>
 								<p class="zhanji-nav clearf" v-if="recentHistoryList.length">
 									<span>{{$t('赛事')}}</span>
 									<span>{{$t('日期')}}</span>
@@ -292,12 +292,12 @@
 									<span>
 										<em class="blackDot"></em>
 									</span>
-									<b style="color:red;">{{$t('主队')}}</b>近{{homeRecentRecordList.length}}场交战,
-									<b style="color:red;margin-left:5px;">{{home_win}}胜</b>
+									<b style="color:red;">{{$t('主队')}}</b>近{{homeRecentRecordList.length}}{{$t('场交战')}},
+									<b style="color:red;margin-left:5px;">{{home_win}}{{$t('胜')}}</b>
 									<b style="color:green;margin-left:5px;">{{home_draw}}平</b>
 									<b style="color:rgb(45, 45, 177);margin-left:5px;">{{home_lose}}负</b>;
 									<b style="color:rgb(197, 24, 33);">{{$t('主场')}}</b>
-									<b style="color:red;margin-left:5px;">{{home_home_win}}胜</b>
+									<b style="color:red;margin-left:5px;">{{home_home_win}}{{$t('胜')}}</b>
 									<b style="color:green;margin-left:5px;">{{home_home_draw}}平</b>
 									<b style="color:rgb(45, 45, 177);margin-left:5px;">{{home_home_lose}}负</b>
 								</p>
@@ -326,12 +326,12 @@
 									<span>
 										<em class="blackDot"></em>
 									</span>
-									<b style="color:green;">{{$t('客队')}}</b>近{{awayRecentRecordList.length}}场交战,
-									<b style="color:red;margin-left:5px;">{{away_win}}胜</b>
+									<b style="color:green;">{{$t('客队')}}</b>近{{awayRecentRecordList.length}}{{$t('场交战')}},
+									<b style="color:red;margin-left:5px;">{{away_win}}{{$t('胜')}}</b>
 									<b style="color:green;margin-left:5px;">{{away_draw}}平</b>
 									<b style="color:rgb(45, 45, 177);margin-left:5px;">{{away_lose}}负</b>;
 									<b style="color:rgb(197, 24, 33);">{{$t('主场')}}</b>
-									<b style="color:red;margin-left:5px;">{{away_home_win}}胜</b>
+									<b style="color:red;margin-left:5px;">{{away_home_win}}{{$t('胜')}}</b>
 									<b style="color:green;margin-left:5px;">{{away_home_draw}}平</b>
 									<b style="color:rgb(45, 45, 177);margin-left:5px;">{{away_home_lose}}负</b>
 								</p>
@@ -415,7 +415,7 @@
 					<!--积分-->
 					<div class="inner-jifen">
 						<p>
-							<em class="blackDot"></em> 2017/2018赛季{{datas.leagueName}}积分榜
+							<em class="blackDot"></em> 2017/2018{{$t('赛季')}}{{datas.leagueName}}{{$t('胜积分榜')}}
 						</p>
 						<p class="clearf">
 							<span class="jifen-span1">{{$t('排名')}}</span>
@@ -445,15 +445,15 @@
 						<p>
 							<span>
 								<em class="redDot" style="background-color: #ffffcc;"></em>
-								<!-- 欧冠正赛 -->无关
+								<!-- 欧冠正赛 -->{{$t('无关')}}
 							</span>
 							<span>
 								<em class="redDot" style="background-color: #ff9999;"></em>
-								<!-- 欧冠资格赛 -->主队
+								<!-- 欧冠资格赛 -->{{$t('主队')}}
 							</span>
 							<span>
 								<em class="redDot" style="background-color: #CCFF99;"></em>
-								<!-- 欧联资格赛 -->客队
+								<!-- 欧联资格赛 -->{{$t('客队')}}
 							</span>
 						</p>
 					</div>
@@ -499,7 +499,7 @@
 								</li>
 							</ul>
 							<div class="nodata" v-if="!euro_odd_list.length" v-show="!flag">
-								没有数据
+								{{$t('没有数据')}}
 							</div>
 						</div>
 						<!--亚盘-->
@@ -537,7 +537,7 @@
 								</li>
 							</ul>
 							<div class="nodata" v-if="!Ah_odd_list.length" v-show="!flag">
-								没有数据
+								{{$t('没有数据')}}
 							</div>
 						</div>
 						<!--大小盘-->
@@ -575,7 +575,7 @@
 								</li>
 							</ul>
 							<div class="nodata" v-if="!Over_Under_list.length" v-show="!flag">
-								没有数据
+								{{$t('没有数据')}}
 							</div>
 						</div>
 					</div>
@@ -589,7 +589,7 @@
 		</div>
 		<!-- 加载数据时的遮罩层 -->
 		<div class="mask" v-show="flag">
-			<p>正在加载中，请稍后...</p>
+			<p>{{$t('正在加载中')}}，{{$t('请稍后')}}...</p>
 		</div>
 	</div>
   </div>

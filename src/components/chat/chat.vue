@@ -5,9 +5,9 @@
 				<header id="header">
 					<span class="goBack" href="javascript:void(0)" @click="routerBack" style="padding-left: 2.5rem;">{{$t('返回')}}</span>
 					<h1 style="line-height: 1.5rem;">
-						聊天室
-						<span style="line-height: 1.38rem; font-size: .8rem;display: block;" v-if="id==1">私聊{{uName}}</span>
-						<span style="line-height: 1.38rem;font-size: .8rem;display: block;" v-else>{{onlineNum}}人在线</span>
+						{{$t('聊天室')}}
+						<span style="line-height: 1.38rem; font-size: .8rem;display: block;" v-if="id==1">{{$t('私聊')}}{{uName}}</span>
+						<span style="line-height: 1.38rem;font-size: .8rem;display: block;" v-else>{{onlineNum}}{{$t('人在线')}}</span>
 					</h1>
 					<span style="position: absolute;top: .6rem;right: 2rem;" @click="togoChatUser()" v-if="id==0"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAEEUlEQVRoQ92Zj1EVMRDG96tAqUCpQKxArECsQKlArECtQKxArUCoQKlAqECoQKxgnc/ZvNmXl7vLJjlGzQyOaC63v+z/PcgKS1Xvi8gjEXloP3zLN/4B4GKFVwpGHWrCvxCRlyJyMHPurYicichnAH/gRqwhIKpKgFMRoSYiiyCvAVxGHirt7QIxLXwRkcNOQY4BfOo5oxlEVWn/hMjN6EpEKNQZgGsvnKoeGTTN714m+CcAx60wTSCmia8ZxI2InACg/c8ue/5ERN5kG2lmNNHwagWhJni7aVELhwDoyNXLNETtee08r7mM/CVhEHs5Qbog0sOqSv+idtO6BrBffRu2sQXkh8sNv/j3qCZyIVWVZvbe/XvYxEIgBW10RxunGQaGB/Z7WCtRENozcwbXDQBGriGrcEmPI/klCvLTJb0PAGgSQ5ZFMp6f1jsAb2sPj4KoO7gpuswJpqrM9E9szzkAHxlnmapBCtHl6chaiVKqKnPIK5P4AkB1xdAMAqD62VrzUFWaUkqSdwMiIv+mRkz13kfWAPE+wjKfNVnVCpmHqnqQoVHLLspHxVWjls8j4aS1ELEYoXzps2oeyV82MrOz3kpR6grAXJe5cych0zL1b5USIsKbC1W9uRSFrL5urWUguVa6GiJV5c1TG6lNDmuDcoU1YjBsnp65m22CMQj6ha/ZQr6RZGgF4Ys5MPANEX9n2bLV3k45uKoygzMB+oFF2KS6QEwrNAnG/Z3e2/r184Iv8AKoSRabeeXcFTiaNJIENNMowaQt1FIKBH5YlzN2QTT7iJei4KxVmdht4kUQpMokpw5v1ogB0M6ry4gFQiZbZvMmoDCIzbM+VgzlOB7KhaJf5T6V8zEiUkOh3BQCmYg0SRA6N81kZzBXcHpmcOYj/qQ+3W8jBGEWZ2ShqGVtKKccuRlxisJm6DR6gy5gMAjQrFJn6IGq89OiRiamit0AE1piXsmBqmBmQWYgOFXsnqCXnD9rd9OWRZglkCGj0Wg8VlWaME3WB4bZ/mQSpDD945emo1ZfaIBhhPuePTc5uSmCWI7whzCUHtwVhAsE1AxDfVqMZvslOaZAfJNDx17NJ5Y0VfCZYou9A7LmfHdJ6Kn/V1UGFn5cTYta2Uq2JRCaVGozh853O0DyTw87E5YtkIJvDB+LdsD4UdEtgD1/Vg7ipyRNLWeroEvPFUa2W6V/DuI/4jR3a0tCtf6/qvrBx9aQewNiVS1B0mrqnVuFrHlOVSfnah7Ex+y/wskL9Vg+wdlLOcWD+El46NtEzW2O2pONbTfzZw/io0Jo7jpKyJpz/icQlimpmFzUSPdUo+Z2W/Zkn+c2luNNy08P/7qI5QpJH7k2cnoQTvwYuS5HfxtsufmZuivJyc8am57+N9Fb60JVIYTDAAAAAElFTkSuQmCC" style="width: 1.5rem;"/></span>
 				</header>

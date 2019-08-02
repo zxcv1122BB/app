@@ -25,7 +25,7 @@
 							<!--<a onclick="" class="copy1" data-clipboard-action="copy" :data-clipboard-text="payConditions.account_name" style="color: blue;">{{$t('复制')}}</a>-->
 						</p>
 						<p id="bbb" v-cloak>
-							<span>账号：</span>
+							<span>{{$t('账号')}}：</span>
 							{{payConditions.bank_account}}
 							<!--<a @click="copyTxt($event,payConditions.bank_account)">{{$t('复制')}}</a>-->
 							<!--<a onclick="" class="copy2" data-clipboard-action="copy" :data-clipboard-text="payConditions.bank_account" style="color: blue;">{{$t('复制')}}</a>-->
@@ -42,7 +42,7 @@
 				<div class="payMes">
 					<span id="payMesTit">{{$t('充值信息')}}</span>
 					<p v-cloak>充值订单号：{{orderNum}}</p>
-					<p>充值金额：<input type="text"  v-model="money" disabled="disabled"/></p>
+					<p>{{$t('充值金额')}}：<input type="text"  v-model="money" disabled="disabled"/></p>
 					<p>真实姓名：<input type="text"  v-model="wxName"/></p>
 				</div>
 				<p class="payBtn"><input type="button" value="下一步"  @click="clickSure(2)"/></p>

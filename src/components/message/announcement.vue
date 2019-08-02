@@ -16,7 +16,7 @@
 	                <span class="san-icon"></span>
 	                <h3 v-cloak>{{item.title}}</h3>
 	                <p class="bull-txt" v-cloak v-html="item.content">{{item.content}}</p>
-	                <p class="bull-bot">[系统公告] <span v-cloak>{{item.create_date}}</span></p>
+	                <p class="bull-bot">[{{$t('系统公告')}}] <span v-cloak>{{item.create_date}}</span></p>
 	            </div>
 	        </div>
 	        <!--加载更多-->

@@ -16,7 +16,7 @@
                             <!-- <span v-cloak>{{courtDown}}</span> -->
                         <!-- </p> -->
                         <!-- <p v-if="qici">
-                            <span v-cloak>第{{qici}}期</span>
+                            <span v-cloak>第{{qici}}{{$t('期')}}</span>
                             <span id="flag">即将开奖...</span>
                         </p>
                         <p v-else>
@@ -54,8 +54,8 @@
                             <ul class="mui-row" style="padding: 5px 0;">
                                 <li class="mui-col-xs-9 mui-col-sm-9" style="line-height: 30px;color: #fff;font-size: 14px;">
                                     
-                                    <span style="margin-right:10px;">第{{qici}}期</span>
-                                    <span>截止时间：{{courtDown}}</span>
+                                    <span style="margin-right:10px;">第{{qici}}{{$t('期')}}</span>
+                                    <span>{{$t('截止时间')}}：{{courtDown}}</span>
                                     <!-- <button class="mui-btn" style="padding: 2px 7px;font-size: 13px;background: #8b8feb;border: none;margin-left: 10px;margin-top: 5px;">结果走势</button> -->
                                     <!-- <img  class="refresh" src="../../../assets/images/base/refresh.png"  @click="downRefresh()" style="width: 28px;vertical-align: middle;margin-left: 8px;"> -->
                                 </li>
@@ -67,7 +67,7 @@
                             
                             <!-- <div class="mui-row" style="padding: 10px 0 7px;">
                                 <div class="mui-col-xs-4 mui-col-sm-4" style="line-height: 20px;color: #fff;font-size: 14px;font-weight: 300;width:40%;">
-                                    第{{preventBanner}}期
+                                    第{{preventBanner}}{{$t('期')}}
                                 </div>
                                
                             </div> -->
@@ -79,7 +79,7 @@
                         <ul class="award">
                             <li v-for='item in datas'>
                                 <p>
-                                    <span v-cloak>第{{item.issue}}期</span>
+                                    <span v-cloak>第{{item.issue}}{{$t('期')}}</span>
                                     <span v-cloak>{{item.open_time}}</span>
                                 </p>
                                 <template v-if="code!='k3'">

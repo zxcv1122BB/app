@@ -13,14 +13,14 @@
         <!--期数与截止时间-->
         <div class="time clearf" v-if="!isNoMsg" v-cloak>
           <p class="time-left">第{{banner_number}}期</p>
-          <p class="time-right">距截止:{{endTime}}</p>
+          <p class="time-right">{{$t('距截止')}}:{{endTime}}</p>
         </div>
         <!--赛事战绩-->
         <div class="saishi" v-if="!isNoMsg">
           <span>赛事/截止</span>
-          <span>主胜(3)</span>
+          <span>{{$t('主胜')}}(3)</span>
           <span>平局(1)</span>
-          <span>客胜(0)</span>
+          <span>{{$t('客胜')}}(0)</span>
         </div>
 
         <!--内容列表-->
@@ -40,7 +40,7 @@
                 <div class="top-right">
                   <div :class="(item.winNum==1)?'selected right-1':'right-1'" :data-sp="item.win" data-index="0" @click="selectItem(0,index,item.match_id,$event)" v-cloak>
                     {{item.home_team_name}}
-                    <p>主胜(3)</p>
+                    <p>{{$t('主胜')}}(3)</p>
                   </div>
                   <div :class="(item.drawNum==1)?'selected right-2':'right-2'" :data-sp="item.draw" data-index="1" @click="selectItem(1,index,item.match_id,$event)" v-cloak>
                     VS
@@ -48,7 +48,7 @@
                   </div>
                   <div :class="(item.loseNum==1)?'selected right-3':'right-3'" :data-sp="item.draw" data-index="2" @click="selectItem(2,index,item.match_id,$event)" v-cloak>
                     {{item.away_team_name}}
-                    <p>客胜(0)</p>
+                    <p>{{$t('客胜')}}(0)</p>
                   </div>
                 </div>
               </div>
@@ -78,7 +78,7 @@
         <div class="zhezhao"></div>
         <!--弹出层-->
         <div class="tishi">
-          <p class="prompt">确定要清空所有选项？</p>
+          <p class="prompt">{{$t('确定要清空所有选项')}}？</p>
           <p class="tanchu clearf">
             <a href="javascript:void(0)" @click='esc'>{{$t('取消')}}</a>
             <a href="javascript:void(0)" @click='confirm'>{{$t('确定')}}</a>
@@ -88,7 +88,7 @@
         <div class="btn">
           <p class="btn-p1"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAEG0lEQVRoQ+2aT2oUQRTG33cCkwuouYAm2yAkXkDjCTQnUFeCCEkQwZ16AuMJoifQLMSl0QuoG8GVEXdunvzG10NN90xPdXXPwIAFQ0imu+p978/3/lRkK7604vLboADcfcfMNs1sLfmJjr4mn0+SzoZSXC8A7o6gN83sjpntJkKdThGQZ6/G38/N7J2ZHUt60wdMEQB3v2xmd0NwBEOI1wglCW3PXO6OhQALaADx/CF7SAJYp9UZgLsfmNk9s5H7PedTcjBShiIQ/nYAuS8JRWSvbABx2En49lEfwevSxd4oA3c8NjOAZFkjC4C7Y3KE/4bphwzCFIy77wWAL2Z2PQfEXADujq++NLNXuE7Optn2n/JgWAM3uhQgWhmrFUBo/i3CSwLIUlawGywFiI02pc0EEGyB8LDD0oSvNJSA8DZ3mgogXkZ4vt9dtNvMMmsoscoXMF9jzQIAtfECwhdnTXe/AT1K+lzqe0kMEtSAmVgNABFEsMCRJIAUrWAUmOuPmV2U9KNoo3/5YhQPkjZyAMDDaJ5sW7zc/amZPYgNpmovd/NEqfuSkG+8JizQ9mDuYUkQPjKzx/H7NUnvu+6RPu/uCL5Tt0IdAH5/KIn6ptdy96EBUEN9NLOtNC7rAPD90yFoc2gAaNPdKfxeSxoz0hhA4j63uhZU00y1IACjeil1oxRAVTKsD8H7CwJArQSzkZ1HZXsKAMrck4Sv9V4LAgAzVoXeKCekACig1iSlnVUxkEUAiDigtKDcxp0mAICIjqo4edVob1AWSuiZyoBAHsmZWmBVAEzI+R/ArCBZYAyQzCjxGy608kEMIpLEVjH1JC+6+0MzexJ/2pb0oe++0af8jAanQaNDJ7JtM6Mp+m5mVyT9HgBAayKrksQgpURfYWeUJ3A/yXZc6teLOdIzuWDpPXAOYHcnCxPAzWIushxfHEhaz9mw7ZnoZxlUMaDi0NaR47zzkglJazlduVGj85l3QP37KH0Zi7B6j2WioWl0itN64qmdTxcACVtUrzFSLy4Ss1vKcKPKCn2bemqWapz+IvXbLsoImWAzSuhGn942VmF8TjNeNFYJK0AG5/VGvAuAzmOVQExPTKJonYp1EaTk2WQ6SAzlD7YCBD4LiBNJ+yUC9HknnQ62xU/ucJeroKWBSISHzjeLhruV9hIf7HTxUKr95CKFKdzc0ebc+4GaO5EJyRFFgT0PVIwjuYvgIiVrqJwFIKFXSm6okcoVasy6BsoQHHp8Rp3T9SIlG0DiUtXkGoaiuCoGEu7CpSF0i9a5AVrMJV+qxTiYQ6G2C3HFysFM9XKuWbkQ532YDsFRCo16Z4t2tkANCPkCs/OhcKtWY46f3N7zzK8KdFeN192xF4ApBRwzpXn/anA2JAkMCmBesC7i+5UH8BeqWCtP4QhLLAAAAABJRU5ErkJggg==" width="20" height="20" /> 猜对14场比赛结果，即可中得最高500万奖金</p>
           <p class="btn-p2">
-            <span>已选择1场，还差2场</span>
+            <span>{{$t('已选择')}}1场，还差2场</span>
             <span @click='clearSelect'>
               <i class="trash_icon"></i>
               <span>{{$t('清空')}}</span>
@@ -114,8 +114,8 @@
           <div class="btn2-bottom">
             <a href="javascript:void (0)" @click="payment($event)">{{$t('立即付款')}}</a>
             <p>
-              我已阅读并同意
-              <a href="javascript:void (0)" @click="togorule">《委托投注规则》</a>
+              {{$t('我已阅读并同意')}}
+              <a href="javascript:void (0)" @click="togorule">《{{$t('委托投注规则')}}》</a>
             </p>
           </div>
         </div>

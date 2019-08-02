@@ -9,15 +9,15 @@
         <article id="article">
           <form action="">
             <section>
-              <p class="huiTi">为了您的账户安全，真实姓名需要与绑定银行卡一致</p>
+              <p class="huiTi">{{$t('为了您的账户安全')}}，{{$t('真实姓名需要与绑定银行卡一致')}}</p>
               <div id="name">
-                <span>姓名: </span>
+                <span>{{$t('姓名')}}: </span>
                 <input type="text" placeholder="请输入姓名" id="fullName" v-model="fullName"/>
               </div>
               <div id="info">
-                <p><span>银行名称: </span><input type="text" placeholder="请输入银行名称" id="bankName" v-model="bankName" /></p>
-                <p><span>银行卡号: </span><input type="text" placeholder="请输入银行卡号" id="bankAccount" v-model="bankAccount" /></p>
-                <p><span>开户银行地址: </span><input type="text" placeholder="请输入开户行地址" id="bankAddress" v-model="bankAddress" /></p>
+                <p><span>{{$t('银行名称')}}: </span><input type="text" placeholder="请输入银行名称" id="bankName" v-model="bankName" /></p>
+                <p><span>{{$t('银行卡号')}}: </span><input type="text" placeholder="请输入银行卡号" id="bankAccount" v-model="bankAccount" /></p>
+                <p><span>{{$t('开户银行地址')}}: </span><input type="text" placeholder="请输入开户行地址" id="bankAddress" v-model="bankAddress" /></p>
               </div>
               <p id="prompt"></p>
               <p><input type="button" value="确认" class="btnSure" @click="updateBank(fullName,bankAccount,bankName,bankAddress)"/></p>

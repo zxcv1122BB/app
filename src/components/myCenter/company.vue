@@ -14,7 +14,7 @@
 					<p><img :src="'static/'+payConditions.payico_url" style="height: 2rem;"/></p>
 					<div>
 						<p id="aaa" v-cloak>
-							<span>姓名：</span>
+							<span>{{$t('姓名')}}：</span>
 							{{payConditions.account_name}}
               <span type="button"
                     v-clipboard:copy="payConditions.account_name"
@@ -22,7 +22,7 @@
                     v-clipboard:error="onError" class="copy" style="color: white;">{{$t('复制')}}</span>
 						</p>
 						<p id="bbb" v-cloak>
-							<span>账号：</span>
+							<span>{{$t('账号')}}：</span>
 							{{payConditions.bank_account}}
 							<span type="button"
 						     v-clipboard:copy="payConditions.bank_account"
@@ -39,7 +39,7 @@
 				<div class="payMes">
 					<span id="payMesTit">{{$t('充值信息')}}</span>
 					<p v-cloak>充值订单号：{{orderNum}}</p>
-					<p id="money">充值金额：<input type="text" v-model="money" disabled="disabled" /></p>
+					<p id="money">{{$t('充值金额')}}：<input type="text" v-model="money" disabled="disabled" /></p>
 					<p v-cloak>{{payConditions.pay_name?payConditions.pay_name:''}}姓名：<input type="text" v-model="wxName" /></p>
 				</div>
 				<p class="payBtn" style="margin-left:7.5%;margin-top: .5rem;"><input type="button" value="下一步" @click="clickSure(1)" /></p>

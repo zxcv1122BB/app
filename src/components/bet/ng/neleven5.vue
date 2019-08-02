@@ -43,15 +43,15 @@
                             <div class="inner">
                                 <div class="content">
                                     <p class="help-title">
-                                        <span style="color: #78d6d5;font-size:1.1rem;">1.玩法提示</span>
+                                        <span style="color: #78d6d5;font-size:1.1rem;">1.{{$t('玩法提示')}}</span>
                                     </p>
                                     <p>{{game_tips}}</p>
                                     <p class="help-title">
-                                        <span style="color: #78d6d5;font-size:1.1rem;">2.中奖说明</span>
+                                        <span style="color: #78d6d5;font-size:1.1rem;">2.{{$t('中奖说明')}}</span>
                                     </p>
                                     <p>{{win_explain}}</p>
                                     <p class="help-title">
-                                        <span style="color: #78d6d5;font-size:1.1rem;">3.范例</span>
+                                        <span style="color: #78d6d5;font-size:1.1rem;">3.{{$t('范例')}}</span>
                                     </p>
                                     <p>{{win_example}}</p>
                                 </div>
@@ -134,11 +134,11 @@
                             </ul>
                              <div class="hisWrap hide" @click="showHis(2)"></div>
                             <div class="num" @click="showHis(1)">
-                                <!-- <span class="red" style="font-size: 1.2rem;color:red" v-if="previousIssue_tips">开奖中...</span> -->
+                                <!-- <span class="red" style="font-size: 1.2rem;color:red" v-if="previousIssue_tips">{{$t('开奖中')}}...</span> -->
                                 <div v-if="previousIssue_tips" >
                                     <span style="font-size:1.2rem;color:red;height: 25px;display: inline-block;position:relative;top:-.2rem;">{{$t('开奖数据获取中')}}</span>  <img  style="animation:rotating 1.2s linear infinite;width:25px;" src="../../../assets/images/base/n_refresh.png" alt="">
                                 </div>
-                                <span v-else-if="!recentlyNum||recentlyNum.length==0" style="height:1.5rem;" class="red">数据获取中...</span>
+                                <span v-else-if="!recentlyNum||recentlyNum.length==0" style="height:1.5rem;" class="red">{{$t('数据获取中')}}...</span>
                                 <template v-else>
                                 <span v-bind:key="index" v-for="(item,index) in recentlyNum.split(',')" class="ball">{{item}}</span>
                                 </template>
@@ -493,9 +493,9 @@
                 <img src="../../../assets/images/success.png" alt="" srcset="">
             </div>
             <div class="msg">
-                <h3>投注成功,预祝您中奖</h3>
-                <p>当前投注彩种：{{typeNameTitle}}</p>
-                <p>当前投注期数：{{preventBanner}}期</p>
+                <h3>{{$t('投注成功')}},{{$t('预祝您中奖')}}</h3>
+                <p>{{$t('当前投注彩种')}}：{{typeNameTitle}}</p>
+                <p>{{$t('当前投注期数')}}：{{preventBanner}}期</p>
             </div>
             <button type="button" class="mbt mui-btn mui-btn-danger">{{$t('确认')}}</button>
         </div> -->
@@ -514,7 +514,7 @@
         <div class="popup">
             <div class="body">
                 <div class="go_service">
-                    <p>余额不足,请前往充值</p>
+                    <p>{{$t('余额不足')}},{{$t('请前往充值')}}</p>
                 </div>
             </div>
             <div class="footer">
@@ -530,8 +530,8 @@
                 <div class="btnInfo">
                     <div :key="index" v-for="(it,index) in betConfirm_tips">
                         <p>类型：{{typeNameTitle}}({{it.type}})</p>
-                        <p>赔率：{{it.odds}} , 投注金额：{{it.betsCoins}}</p>
-                        <p>投注项：{{it.betsClause}}</p>
+                        <p>{{$t('赔率')}}：{{it.odds}} , {{$t('投注金额')}}：{{it.betsCoins}}</p>
+                        <p>{{$t('投注项')}}：{{it.betsClause}}</p>
                     </div>
                 </div>
                 <div class="btnList">
@@ -547,7 +547,7 @@
 
                 <div class="btnInfo">
                     <div class="coin clearfix">
-                        <div class="clearfix">单注金额  <input pattern="[0-9]*" type="number" class="mui-input mui-input-clear"  v-model="singleCoins" @keyup="handleCoins"> 元
+                        <div class="clearfix">{{$t('单注金额')}}  <input pattern="[0-9]*" type="number" class="mui-input mui-input-clear"  v-model="singleCoins" @keyup="handleCoins"> 元
                         </div>
                          <div class="coinList">
                             <span @click="setSingleCoins(10,$event)">10</span>
@@ -563,9 +563,9 @@
                     </div>
                      <div class="bet_detail">
                             <ul>
-                                <li>注数:<span class="bl">{{bets}}</span>{{$t('注')}}</li>
-                                <li>总额:<span class="bl">{{bets*singleCoins}}</span>{{coinUnit}}</li>
-                                <li>若中奖,单注最高中:
+                                <li>{{$t('注数')}}:<span class="bl">{{bets}}</span>{{$t('注')}}</li>
+                                <li>{{$t('总额')}}:<span class="bl">{{bets*singleCoins}}</span>{{coinUnit}}</li>
+                                <li>{{$t('若中奖')}},{{$t('单注最高中')}}:
                                     <span class="bl" style="color:green">
 									{{present_playId==177?bonusSum:parseFloat(singleCoins*orderOdds).toFixed(2)}}
 								</span>
@@ -588,13 +588,13 @@
 
                 <div class="btnInfo">
                     <div style="text-align:left;">
-                        <p>投注彩种：{{typeNameTitle}}</p>
-                        <p>投注玩法：{{title}}</p>
-                        <p>投注金额：{{totalCoins+coinUnit}}</p>
-                        <p>投注期数：第{{preventBanner}}期</p>
+                        <p>{{$t('投注彩种')}}：{{typeNameTitle}}</p>
+                        <p>{{$t('投注玩法')}}：{{title}}</p>
+                        <p>{{$t('投注金额')}}：{{totalCoins+coinUnit}}</p>
+                        <p>{{$t('投注期数')}}：第{{preventBanner}}期</p>
                     </div>
                  <div :key="index" v-for="(it,index) in betConfirm_tips">
-                        <p>投注项：{{it.betsClause}}</p>
+                        <p>{{$t('投注项')}}：{{it.betsClause}}</p>
                     </div>
                     </div>
                 <div class="btnList">
