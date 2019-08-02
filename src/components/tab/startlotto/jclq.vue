@@ -30,7 +30,7 @@
                     <li>
                         <div v-for="(it,index) in datas" id="showMessage">
                             <p class="inner-date match-divider" @click="fold(index)" :id="index" v-cloak>
-                                {{it[0].gameDate}} {{it.length}}场比赛已开奖
+                                {{it[0].gameDate}} {{it.length}}{{$t('场比赛已开奖')}}
                                 <i class="match-foldBtn arrow-ico"></i>
                             </p>
                             <div class="inner-div">
@@ -52,8 +52,8 @@
                                                         <span style="color:red" v-if="item.matchResult==1">{{item.courtScore}}</span>
                                                         <span style="color:green" v-else>{{item.courtScore}}</span>
                                                     </p>
-                                                    <p style="color:#999;font-size:0.6rem;">总分{{item.totalScore}}
-                                                        <span>分差{{item.scoreDifference}}</span>
+                                                    <p style="color:#999;font-size:0.6rem;">{{$t('总分')}}{{item.totalScore}}
+                                                        <span>{{$t('分差')}}{{item.scoreDifference}}</span>
                                                     </p>
                                                 </div>
                                                 <div v-cloak>{{item.homeTeamName}}</div>

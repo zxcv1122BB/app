@@ -10,7 +10,7 @@
 					<section id="section" style="display: block;">
 						<div>
 							<div style="color: #ACB3BE;padding-left: 1rem;border-bottom: 1px solid #E3E3E3;line-height: 3rem;">
-									选择禁言的时长</div>
+									{{$t('选择禁言的时长')}}</div>
 							<div class="mui-content">
 								<div class="mui-collapse-content">
 									<ul class="mui-table-view mui-table-view-radio">
@@ -28,7 +28,7 @@
 										</li>
 										<li class="mui-table-view-cell">
 											<a class="mui-navigate-right" id="custom">
-												自定义{{chooseTime}}
+												{{$t('自定义')}}{{chooseTime}}
 											</a>
 										</li>
 									</ul>

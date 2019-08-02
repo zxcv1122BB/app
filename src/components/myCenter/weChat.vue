@@ -14,11 +14,11 @@
                       v-clipboard:copy="ordernumber"
                       v-clipboard:success="onCopy"
                       v-clipboard:error="onError" class="copy" style="color: white;">{{$t('复制')}}</span></p>
-                <div class="money" ><p>　 充值金额：<span v-cloak>{{paymoney}}{{coinUnit}}</span></p></div>
+                <div class="money" ><p>　 {{$t('充值金额')}}：<span v-cloak>{{paymoney}}{{coinUnit}}</span></p></div>
                 <div class="qrCode" v-show="paySet==true" style="position: absolute;width: 90%;left: 5%;">
                   <!-- <div id="qrCode"></div> -->
                   <div style="text-align:left;" v-if="payConditions.payment_mode==5">
-                    <p style="padding:0;">　付款码：<span v-cloak style="color:#e4393c;">{{info.account}}</span>
+                    <p style="padding:0;">　{{$t('付款码')}}：<span v-cloak style="color:#e4393c;">{{info.account}}</span>
                     <span type="button"
                       v-clipboard:copy="info.account"
                       v-clipboard:success="onCopy"
@@ -27,7 +27,7 @@
                   </div>
                   <div v-else-if="payConditions.payment_mode==6" style="padding:0;">
                     <div style="text-align:left;">
-                      <p style="padding:0;">　账号：<span v-cloak style="color:#e4393c;">{{info.account}}</span>
+                      <p style="padding:0;">　{{$t('账号')}}：<span v-cloak style="color:#e4393c;">{{info.account}}</span>
                       <span type="button"
                         v-clipboard:copy="info.account"
                         v-clipboard:success="onCopy"
@@ -58,10 +58,10 @@
             </section>
             <section>
               <div class="payError" v-cloak>
-                <h2>支付失败!</h2>
-                <font v-if="errorMsg" color="red" v-cloak>原因：{{errorMsg}}</font>
-                <p>请联系客服,</p>
-                <p>或者稍后再试。</p>
+                <h2>{{$t('支付失败')}}!</h2>
+                <font v-if="errorMsg" color="red" v-cloak>{{$t('原因')}}：{{errorMsg}}</font>
+                <p>{{$t('请联系客服')}},</p>
+                <p>{{$t('或者稍后再试')}}。</p>
               </div>
             </section>
         </article>

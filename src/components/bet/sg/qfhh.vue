@@ -3,7 +3,7 @@
     <div id="container">
   <div class="markHL hhtz" id="hhtz">
     <div id="qfhh">
-      <noscript>请开启浏览器的javascript的功能，或使用支持javascript的浏览器访问</noscript>
+      <noscript>{{$t('请开启浏览器的')}}javascript{{$t('的功能')}}，{{$t('或使用支持')}}javascript{{$t('的浏览器访问')}}</noscript>
           <article id="mainArea">
             <!--页面头部-->
             <header id="header">
@@ -54,13 +54,13 @@
                                         <span class="row nonsupport" data-index="0"><span class="col game-type">0</span>{{$t('暂不支持')}}</span>
                                       </template>
                                       <template v-else>
-                                        <span class="row" data-index="0"><span class="col game-type">0</span><span :class="obj.home_win ? 'col betbtn' : 'col unable'" data-index='0' data-gametype="spf" :data-sp="obj.home_win" @click="tzItem_click($event,indexs,index,'spf_rqspf',0)">主胜{{obj.home_win ? obj.home_win : "0.00"}}</span><span :class="obj.home_draw ? 'col betbtn' : 'col unable'" data-index='1' data-gametype="spf" :data-sp="obj.home_draw" @click="tzItem_click($event,indexs,index,'spf_rqspf',1)">平{{obj.home_draw ? obj.home_draw : "0.00"}}</span><span :class="obj.home_lose ? 'col betbtn' : 'col unable'" data-index='2' data-gametype="spf" :data-sp="obj.home_lose" @click="tzItem_click($event,indexs,index,'spf_rqspf',2)">主负{{obj.home_lose ? obj.home_lose : "0.00"}}</span></span>
+                                        <span class="row" data-index="0"><span class="col game-type">0</span><span :class="obj.home_win ? 'col betbtn' : 'col unable'" data-index='0' data-gametype="spf" :data-sp="obj.home_win" @click="tzItem_click($event,indexs,index,'spf_rqspf',0)">{{$t('主胜')}}{{obj.home_win ? obj.home_win : "0.00"}}</span><span :class="obj.home_draw ? 'col betbtn' : 'col unable'" data-index='1' data-gametype="spf" :data-sp="obj.home_draw" @click="tzItem_click($event,indexs,index,'spf_rqspf',1)">平{{obj.home_draw ? obj.home_draw : "0.00"}}</span><span :class="obj.home_lose ? 'col betbtn' : 'col unable'" data-index='2' data-gametype="spf" :data-sp="obj.home_lose" @click="tzItem_click($event,indexs,index,'spf_rqspf',2)">主负{{obj.home_lose ? obj.home_lose : "0.00"}}</span></span>
                                       </template>
                                       <template v-if="(!obj.letball_win && !obj.letball_draw && !obj.letball_lose) || (parseInt(obj.letball_win) === 0 && parseInt(obj.letball_draw) ===0 && parseInt(obj.letball_lose) ===0)">
                                         <span class="row nonsupport" data-index="1"><span class="col game-type">{{obj.letball_number}}</span>{{$t('暂不支持')}}</span>
                                       </template>
                                       <template v-else>
-                                        <span class="row" data-index="1"><span :class="parseInt(obj.letball_number) > 0 ? 'col game-type c_e24949' : 'col game-type'">{{obj.letball_number > 0 ? "+" + obj.letball_number : obj.letball_number}}</span><span :class="obj.letball_win ? 'col betbtn' : 'col unable'" data-index='0' data-gametype="spf" :data-sp="obj.letball_win" @click="tzItem_click($event,indexs,index,'spf_rqspf',3)">主胜{{obj.letball_win ? obj.letball_win : "0.00"}}</span><span :class="obj.letball_draw ? 'col betbtn' : 'col unable'" data-index='1' data-gametype="spf" :data-sp="obj.letball_draw" @click="tzItem_click($event,indexs,index,'spf_rqspf',4)">平 {{obj.letball_draw ? obj.letball_draw : "0.00"}}</span><span :class="obj.letball_lose ? 'col betbtn' : 'col unable'" data-index='2' data-gametype="spf" :data-sp="obj.letball_lose" @click="tzItem_click($event,indexs,index,'spf_rqspf',5)">主负{{obj.letball_lose ? obj.letball_lose : "0.00"}}</span></span>
+                                        <span class="row" data-index="1"><span :class="parseInt(obj.letball_number) > 0 ? 'col game-type c_e24949' : 'col game-type'">{{obj.letball_number > 0 ? "+" + obj.letball_number : obj.letball_number}}</span><span :class="obj.letball_win ? 'col betbtn' : 'col unable'" data-index='0' data-gametype="spf" :data-sp="obj.letball_win" @click="tzItem_click($event,indexs,index,'spf_rqspf',3)">{{$t('主胜')}}{{obj.letball_win ? obj.letball_win : "0.00"}}</span><span :class="obj.letball_draw ? 'col betbtn' : 'col unable'" data-index='1' data-gametype="spf" :data-sp="obj.letball_draw" @click="tzItem_click($event,indexs,index,'spf_rqspf',4)">平 {{obj.letball_draw ? obj.letball_draw : "0.00"}}</span><span :class="obj.letball_lose ? 'col betbtn' : 'col unable'" data-index='2' data-gametype="spf" :data-sp="obj.letball_lose" @click="tzItem_click($event,indexs,index,'spf_rqspf',5)">主负{{obj.letball_lose ? obj.letball_lose : "0.00"}}</span></span>
                                       </template>
                                       </div>
                                 </div>
@@ -144,13 +144,13 @@
                                           <span class="row nonsupport" data-index="0"><span class="col game-type">0</span><span>{{$t('暂不支持')}}</span></span>
                                         </template>
                                         <template v-else>
-                                          <span class="row" data-index="0"><span class="col game-type">0</span><span :class="obj.home_win ? 'col betbtn' : 'col unable'" data-index='0' data-gametype="spf" :data-sp="obj.home_win" @click="tzItem_click($event,indexs,index,'spf_rqspf',0)">主胜{{obj.home_win ? obj.home_win : "0.00"}}</span><span :class="obj.home_draw ? 'col betbtn' : 'col unable'" data-index='1' data-gametype="spf" :data-sp="obj.home_draw" @click="tzItem_click($event,indexs,index,'spf_rqspf',1)">平{{obj.home_draw ? obj.home_draw : "0.00"}}</span><span :class="obj.home_lose ? 'col betbtn' : 'col unable'" data-index='2' data-gametype="spf" :data-sp="obj.home_lose" @click="tzItem_click($event,indexs,index,'spf_rqspf',2)">主负{{obj.home_lose ? obj.home_lose : "0.00"}}</span></span>
+                                          <span class="row" data-index="0"><span class="col game-type">0</span><span :class="obj.home_win ? 'col betbtn' : 'col unable'" data-index='0' data-gametype="spf" :data-sp="obj.home_win" @click="tzItem_click($event,indexs,index,'spf_rqspf',0)">{{$t('主胜')}}{{obj.home_win ? obj.home_win : "0.00"}}</span><span :class="obj.home_draw ? 'col betbtn' : 'col unable'" data-index='1' data-gametype="spf" :data-sp="obj.home_draw" @click="tzItem_click($event,indexs,index,'spf_rqspf',1)">平{{obj.home_draw ? obj.home_draw : "0.00"}}</span><span :class="obj.home_lose ? 'col betbtn' : 'col unable'" data-index='2' data-gametype="spf" :data-sp="obj.home_lose" @click="tzItem_click($event,indexs,index,'spf_rqspf',2)">主负{{obj.home_lose ? obj.home_lose : "0.00"}}</span></span>
                                         </template>
                                         <template v-if="(!obj.letball_win && !obj.letball_draw && !obj.letball_lose) || (parseInt(obj.letball_win) === 0 && parseInt(obj.letball_draw) ===0 && parseInt(obj.letball_lose) ===0)">
                                           <span class="row nonsupport" data-index="1"><span class="col game-type">{{obj.letball_number}}</span>{{$t('暂不支持')}}</span>
                                         </template>
                                         <template v-else>
-                                          <span class="row" data-index="1"><span :class="parseInt(obj.letball_number) > 0 ? 'col game-type c_e24949' : 'col game-type'">{{obj.letball_number > 0 ? "+" + obj.letball_number : obj.letball_number}}</span><span :class="obj.letball_win ? 'col betbtn' : 'col unable'" data-index='0' data-gametype="spf" data-sp="obj.letball_win" @click="tzItem_click($event,indexs,index,'spf_rqspf',3)">主胜{{obj.letball_win ? obj.letball_win : "0.00"}}</span><span :class="obj.letball_draw ? 'col betbtn' : 'col unable'" data-index='1' data-gametype="spf" :data-sp="obj.letball_draw" @click="tzItem_click($event,indexs,index,'spf_rqspf',4)">平 {{obj.letball_draw ? obj.letball_draw : "0.00"}}</span><span :class="obj.letball_lose ? 'col betbtn' : 'col unable'" data-index='2' data-gametype="spf" :data-sp="obj.letball_lose" @click="tzItem_click($event,indexs,index,'spf_rqspf',5)">主负{{obj.letball_lose ? obj.letball_lose : "0.00"}}</span></span>
+                                          <span class="row" data-index="1"><span :class="parseInt(obj.letball_number) > 0 ? 'col game-type c_e24949' : 'col game-type'">{{obj.letball_number > 0 ? "+" + obj.letball_number : obj.letball_number}}</span><span :class="obj.letball_win ? 'col betbtn' : 'col unable'" data-index='0' data-gametype="spf" data-sp="obj.letball_win" @click="tzItem_click($event,indexs,index,'spf_rqspf',3)">{{$t('主胜')}}{{obj.letball_win ? obj.letball_win : "0.00"}}</span><span :class="obj.letball_draw ? 'col betbtn' : 'col unable'" data-index='1' data-gametype="spf" :data-sp="obj.letball_draw" @click="tzItem_click($event,indexs,index,'spf_rqspf',4)">平 {{obj.letball_draw ? obj.letball_draw : "0.00"}}</span><span :class="obj.letball_lose ? 'col betbtn' : 'col unable'" data-index='2' data-gametype="spf" :data-sp="obj.letball_lose" @click="tzItem_click($event,indexs,index,'spf_rqspf',5)">主负{{obj.letball_lose ? obj.letball_lose : "0.00"}}</span></span>
                                         </template>
                                   </div>
                                   <div class="game-more betbtn" :data-index='index' @click="unfold_tzArea(indexs,index)">
@@ -177,10 +177,10 @@
               <!--赛事筛选按钮的弹出框-->
               <div id="competition-screen" style="display: none;">
                 <div class="screen-content">
-                  <h1>赛事赛选
+                  <h1>{{$t('赛事赛选')}}
                     <span class="total">共
                       <em class="competition-total">0</em>
-                    场比赛
+                    {{$t('场比赛')}}
                     </span>
                   </h1>
                   <div class="screnn-main">
@@ -204,7 +204,7 @@
             <section class="bet-bottom">
               <div class="bottom-box">
                 <span class="bet-help"><i></i>{{$t('开奖结果不含加时赛及点球结果')}}</span>
-                <span class="box-center hide">已选择 <em class="match-num">0</em> 场比赛<span class="btn-cancel" @click="clearDataBtn_click"><i class="trash_icon"></i>{{$t('清空')}}</span></span>
+                <span class="box-center hide">{{$t('已选择')}} <em class="match-num">0</em> {{$t('场比赛')}}<span class="btn-cancel" @click="clearDataBtn_click"><i class="trash_icon"></i>{{$t('清空')}}</span></span>
                 <span class="btn-confirm" data-index="0" @click="bottom_click($event)">{{$t('请选择比赛结果')}}</span>
               </div>
             </section>
@@ -212,7 +212,7 @@
             <section class="goNext hide">
               <div class="bottom-box">
                 <p class="box-header">
-                  已经选择2场比赛
+                  {{$t('已经选择')}}2{{$t('场比赛')}}
                 </p>
                 <i class="close" @click="goNext_close_click"></i>
                 <div class="box-method">
@@ -233,23 +233,23 @@
                     <div class="method-wrap">
                       <span :class="(tzType_freeShow[parseInt(item=='单关'?1:item)-1]==1)?'method active':'method'" :key="index" :data-index="parseInt(item=='单关'?1:item)" v-for="(item,index) of tzType_freeList" @click="tzTypeFreeList_click($event,item)">{{item}}<i class="isSelect"></i></span>
                     </div>
-                    <span class='tip'>串的场次越多，奖金越高，但中奖难度也越大哦</span>
+                    <span class='tip'>{{$t('串的场次越多')}}，{{$t('奖金越高')}}，{{$t('但中奖难度也越大哦')}}</span>
                   </div>
                   <p class="state"><span>{{user_state}}</span></p>
                   <p class="fixMultiple"><span @click="changeMultiple($event,'+10')">10倍</span><span @click="changeMultiple($event,'+20')">20倍</span><span @click="changeMultiple($event,'+50')">50倍</span><span @click="changeMultiple($event,'+100')">100倍</span></p>
-                  <p class="sum">预计奖金
+                  <p class="sum">{{$t('预计奖金')}}
                     <span class="totalNum" data-index="1">{{totalNum+coinUnit}}</span>
                   </p>
                   <div class="paymentBtn">
                     <span>
-                    立即付款
+                    {{$t('立即付款')}}
                     <i class="payNum">{{tz_sumNum*2*multiple}}</i>{{coinUnit}}
                   </span>
                   </div>
                 </div>
                 <div class="bet-agree">
                   <i></i><span>{{$t('我已阅读并同意')}}</span>
-                  <span @click="togorule">《委托投注规则》</span>
+                  <span @click="togorule">《{{$t('委托投注规则')}}》</span>
                 </div>
               </div>
             </section>
@@ -652,7 +652,7 @@
             <header class="header">
               <h1>{{$t('确认投注')}}</h1>
               <a class="goback close" href="javascript:void(0)">
-                返回
+                {{$t('返回')}}
               </a>
             </header>
             <div class="selectContent">

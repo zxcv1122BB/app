@@ -191,8 +191,8 @@
                        <img src="http://img6.cache.netease.com/sports/2015/1/9/201501091046302b56a.jpg">
                     </span>
                     <span class="newslink-span-second">
-                        <span class="app-link-text">老是不中奖，叫教你100%中奖方法</span>
-                        <p class="app-link-ptext">不中奖不要钱,点击查看</p>
+                        <span class="app-link-text">{{$t('老是不中奖')}}，叫教你100%中奖方法</span>
+                        <p class="app-link-ptext">{{$t('不中奖不要钱')}},{{$t('点击查看')}}</p>
                         <i class="generalize">{{$t('推广')}}</i>
                     </span>
                 </a>
@@ -204,7 +204,7 @@
         <!--彩市头条标题-->
         <div class="market-headline">
             <h2>
-                彩市头条
+                {{$t('彩市头条')}}
                 <a class="more" href="javascript:;">更多
                     <i class="arrow"></i>
                 </a>
@@ -219,7 +219,7 @@
                     </span>
                     <span class="newslink-span-second">
                         <h3>{{$t('昨夜大乐透开头奖再空开')}}</h3>
-                        <p class="Pleft">8月28日，体彩大乐透 第17100期开奖，头奖未中出，二</p>
+                        <p class="Pleft">8月28日，{{$t('体彩大乐透')}} 第17100期开奖，{{$t('头奖未中出')}}，二</p>
                         <i class="time">07:36</i>
                     </span>
                 </a>
@@ -231,7 +231,7 @@
                     </span>
                     <span class="newslink-span-second">
                         <h3>双色球100期头奖16注624万</h3>
-                        <p class="Pleft">8月27日晚，中国福利彩票双色球游戏进行第2017100期开</p>
+                        <p class="Pleft">8月27日晚，{{$t('中国福利彩票双色球游戏进行第')}}2017100期开</p>
                         <i class="generalize">{{$t('推广')}}</i>
                     </span>
                 </a>
@@ -242,7 +242,7 @@
     <div class="main cutting-line">
         <div class="market-headline">
             <h2>
-                网易独家
+                {{$t('网易独家')}}
             </h2>
         </div>
         <div>
@@ -280,7 +280,7 @@
     <div class="main cutting-line">
         <div class="market-headline">
             <h2>
-                网易原创
+                {{$t('网易原创')}}
             </h2>
         </div>
         <div>
@@ -318,8 +318,8 @@
     <div  class="main cutting-line">
         <div class="market-headline">
             <h2>
-                网易专家
-                <a class="more" href="javascript:;">全部
+                {{$t('网易专家')}}
+                <a class="more" href="javascript:;">{{$t('全部')}}
                     <i class="arrow"></i>
                 </a>
             </h2>
@@ -390,7 +390,7 @@
                     <a href="javascript:;">{{$t('篮彩')}}</a>
                 </li>
             </ul>
-            <p class="copye">公司版权所有 ©2011-2017</p>
+            <p class="copye">{{$t('公司版权所有')}} ©2011-2017</p>
         </div>
     </footer>
     <!--返回顶部-->

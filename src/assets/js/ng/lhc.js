@@ -638,8 +638,8 @@ export default {
             parentIndex:0, //菜单父类被选中索引
             chlidIndex:0,  //菜单子类选中索引
 
-            isRate: true,  //正方形下的赔率
-            three_Rate: false,//特码包三赔率
+            isRate: true,  //正方形下的
+            three_Rate: false,//特码包三
             isOdds:false,  //圆形底下数字倍率
 
             // 单注金额
@@ -651,8 +651,8 @@ export default {
             win_example:'',
             win_explain:'',
 
-            // 赔率   总概率   返奖率
-            orderOdds:95, //赔率
+            //  总概率   返奖率
+            orderOdds:95, //
             orderCount:100,
             rebate:0, //返利
             rebateNum:0,  //滚动条初始值
@@ -686,7 +686,7 @@ export default {
 
 
 
-            //特殊号--赔率对应数组
+            //特殊号--数组
             special_orderOddsList:[],
             //特殊号--对应单注中奖金额
             special_sum:"",
@@ -1382,11 +1382,11 @@ export default {
 
         },
 
-      // 固定差值=(最大赔率 - 最小赔率) / (最大返点 * 10)			保留三位小数并舍去三位以后小数
-      // 当前赔率 = 最大赔率 - (固定差值 * (最大返点 - 当前返点) * 10)
+      // 固定差值=(最大 最小) (最大返点 * 10)			保留三位小数并舍去三位以后小数
+      // 当前 最大 -固定差值 * (最大返点 - 当前返点) * 10)
       // _this.menu，play_area_manner
       setOrderOdds() {
-        //重新计算赔率&& !this.rebateList
+        //重新计算 !this.rebateList
         if (localStorage.szcRebateList) {
           var _this = this, item, code1 = _this.gamePlayCode1,
             rebateList = JSON.parse(localStorage.szcRebateList);
@@ -1397,7 +1397,7 @@ export default {
             }
           }
 
-          //原始数据赔率修改
+          //原始数据
           //play_area_manner
           for (var key in _this.play_area_manner) {
             item = _this.play_area_manner[key];
@@ -1486,7 +1486,7 @@ export default {
             _this.preventType = typeName;  //当前玩法名称
             _this.play_area_manner[typeName].isSel = true;  //设置当前玩法
             _this.title = _this.play_area_manner[typeName].title; //设置当前玩法的title
-            _this.minPrize = _this.play_area_manner[typeName].minPrize; //获取赔率
+            _this.minPrize = _this.play_area_manner[typeName].minPrize; //获取
             // _this.sigleminPrize = _this.minPrize.split('|');
             _this.TextArr = _this.play_area_manner[typeName].TextArr;
             _this.maxPrize = _this.play_area_manner[typeName].maxPrize;
@@ -2729,7 +2729,7 @@ export default {
         //特殊号单注处理
         setSpecialSum:function(list){
             var _this=this,indexList=[],jd = this.present_playId;
-            _this.special_orderOddsList=[]; //特殊号玩法的赔率数组
+            _this.special_orderOddsList=[]; //特殊号玩法的
             var OddsList = [];
             var indexl=-1;
             if(list){
@@ -2738,8 +2738,8 @@ export default {
                 list.map(function (item) {
                     indexl+=1;
                     if (item.isSel) {
-                        OddsList.push(item.bet); //记录投注的赔率
-                        _this.special_orderOddsList.push(item.bet);//记录赔率的数组
+                        OddsList.push(item.bet); //记录投注的
+                        _this.special_orderOddsList.push(item.bet);//记录组
                         indexList.push(indexl);
                     }
                 });
@@ -2747,7 +2747,7 @@ export default {
                     _this.orderOdds+=OddsList[i]+"|";
                 }
                 _this.special_indexList = indexList; //赋值索引
-                _this.orderOdds=_this.orderOdds.substring(0,_this.orderOdds.length-1); //去掉赔率最后一个|
+                _this.orderOdds=_this.orderOdds.substring(0,_this.orderOdds.length-1); //去掉一个|
                 if(jd ==161||jd==162||jd==163||jd==164||jd==165||jd==166||jd==167||jd==168){
                   _this.orderOdds = Math.min.apply(null,_this.orderOdds.split('|'));
 

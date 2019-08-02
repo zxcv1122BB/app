@@ -56,7 +56,7 @@
 				<div class="info-wrapper clearfix">
 					<div class="countdown">
 						<template v-if="preventBanner!=0">
-							<p v-if="!isNaN(preventBanner)">距离 <em class="red" v-cloak>{{preventBanner}}</em>期 <span>{{noSale?'开售':'截止'}}</span></p>
+							<p v-if="!isNaN(preventBanner)">{{$t('距离')}} <em class="red" v-cloak>{{preventBanner}}</em>期 <span>{{noSale?'开售':'截止'}}</span></p>
               <p v-else>{{preventBanner}}</p>
 							<div class="time">
 								<span v-cloak>{{deadlineStr}}</span>
@@ -69,16 +69,16 @@
 					</div>
 					 <div class="recent">
 		                <p class="btn_banner" v-if="!previousIssue">
-                            近期开奖
+                            {{$t('近期开奖')}}
                             <b class="ico"></b>
                         </p>
                         <p class="btn_banner" v-if="previousIssue">
-                            第<span  class="red">{{previousIssue}}</span>期开奖
+                            第<span  class="red">{{previousIssue}}</span>{{$t('期开奖')}}
                             <b class="ico" style="right: 1.6rem;"></b>
                         </p>
 		                <p class="banner_num">
-                            <span v-if="previousIssue_tips" class="red"  style="font-size:1.2rem;line-height:2.5rem;">开奖中...</span>
-		                		<span v-else-if="!recentlyNum||recentlyNum.length==0" class="red">数据获取中...</span>
+                            <span v-if="previousIssue_tips" class="red"  style="font-size:1.2rem;line-height:2.5rem;">{{$t('开奖中')}}...</span>
+		                		<span v-else-if="!recentlyNum||recentlyNum.length==0" class="red">{{$t('数据获取中')}}...</span>
 			                	<span  v-else class="r_bage" v-for="item in recentlyNum.split(',')">{{item}}</span>
 			                    <!-- <span class="r_bage">{{recentlyNum.split(',')[1]}}</span>
 			                    <span class="r_bage">{{recentlyNum.split(',')[2]}}</span>
@@ -115,7 +115,7 @@
                     </div> -->
           <div class="gamePlan" v-cloak>
                   <span class="presentPlan" v-show="showGamePlan!==2&&isPlan==1" @click="getPlanDataList(1)">
-                    <b>计划:</b>{{nowGamePlan}}
+                    <b>{{$t('计划')}}:</b>{{nowGamePlan}}
                      <i class="down"  v-show="showGamePlan!=1">↓</i>
                     <i class="up"  v-show="showGamePlan==1">↑</i>
                   </span>
@@ -368,10 +368,10 @@
 			    <div class="mask setting">
             <div class="inner">
                 <div class="setting_head">
-                    注单设定
+                    {{$t('注单设定')}}
                 </div>
                 <ul class="odd">
-                    <li>赔率:
+                    <li>{{$t('赔率')}}:
                         <span class="red">{{orderOdds}}</span>
                     </li>
                     <!-- <li>返利:
@@ -387,21 +387,21 @@
                     <ul>
                         <li>
                             <label for="">
-                                单注金额
+                                {{$t('单注金额')}}
                                 <input type="number" pattern="[0-9]*" v-model="singleCoins" @keyup="handleCoins" maxlength="6">
                             </label>
                             <span>{{coinUnit}}</span>
                         </li>
                         <li>
-                            注数:
+                            {{$t('注数')}}:
                             <span class="bl">{{bets}}</span>注
                         </li>
                         <li>
-                            总额:
+                            {{$t('总额')}}:
                             <span class="bl">{{bets*singleCoins}}</span>{{coinUnit}}
                         </li>
                         <li>
-                            若中奖,单注最高中:
+                            {{$t('若中奖')}},{{$t('单注最高中')}}:
                             <span class="bl">{{present_playId==61||present_playId==71?special_sum:parseFloat(singleCoins*orderOdds).toFixed(2)}}</span>{{coinUnit}}
                         </li>
                     </ul>
@@ -434,7 +434,7 @@
                 <span @click="clearSelOptions(1)">{{$t('关闭')}}</span>
             </div>
             <p class="last_time">
-                第<span>{{preventBanner}}</span>期投注截止时间:
+                第<span>{{preventBanner}}</span>{{$t('期投注截止时间')}}:
                 <span>{{deadlineStr}}</span>
             </p>
             <ul class="random">
@@ -476,9 +476,9 @@
                     </li>
                     <li>
                         <div>
-                            <p v-cloak>合计
+                            <p v-cloak>{{$t('合计')}}
                                 <span class="red">{{totalCoins}}</span>{{coinUnit}}</p>
-                            <p v-cloak>可用余额
+                            <p v-cloak>{{$t('可用余额')}}
                                 <span class="red">{{pack_coin}}</span>{{coinUnit}}</p>
                         </div>
                     </li>
@@ -499,9 +499,9 @@
                 <img src="../../../assets/images/success.png" alt="" srcset="">
             </div>
             <div class="msg">
-	             <h3>投注成功,预祝您中奖</h3>
-	            <p>当前投注彩种：{{typeNameTitle}}</p>
-	            <p>当前投注期数：第{{preventBanner}}期</p>
+	             <h3>{{$t('投注成功')}},{{$t('预祝您中奖')}}</h3>
+	            <p>{{$t('当前投注彩种')}}：{{typeNameTitle}}</p>
+	            <p>{{$t('当前投注期数')}}：第{{preventBanner}}期</p>
             </div>
             <button type="button" class="mbt mui-btn mui-btn-danger">{{$t('确认')}}</button>
         </div>
@@ -520,7 +520,7 @@
 		<div class="popup">
             <div class="body">
                 <div class="go_service">
-                    <p>余额不足,请前往充值</p>
+                    <p>{{$t('余额不足')}},{{$t('请前往充值')}}</p>
                 </div>
             </div>
             <div class="footer">

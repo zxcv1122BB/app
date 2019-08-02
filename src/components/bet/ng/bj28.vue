@@ -61,7 +61,7 @@
             <div class="info-wrapper clearfix">
                 <div class="countdown">
                     <template v-if="preventBanner!=0">
-                        <p v-if="!isNaN(preventBanner)">{{$t('距离')}} <em class="red" v-cloak>{{preventBanner}}</em>期 <span>{{noSale?$t('开售'):$t('截止')}}</span></p>
+                        <p v-if="!isNaN(preventBanner)">{{$t('距离')}} <em class="red" v-cloak>{{preventBanner}}</em>{{$t('期')}} <span>{{noSale?$t('开售'):$t('截止')}}</span></p>
                         <p v-else>{{preventBanner}}</p>
                         <div class="time">
                             <span v-cloak>{{deadlineStr}}</span>
@@ -103,7 +103,7 @@
                 </p>
                 <ul>
                     <li v-for="(item,index) in history">
-                        <p>{{item.issue}}期</p>
+                        <p>{{item.issue}}{{$t('期')}}</p>
                         <p class="item_num">
                             <span :class="['r_bage',colorList[item.luck_number.split(',')[0]]]">{{item.luck_number.split(',')[0]}}</span>+
                             <span :class="['r_bage',colorList[item.luck_number.split(',')[1]]]">{{item.luck_number.split(',')[1]}}</span>+
@@ -311,7 +311,7 @@
             <div class="msg">
                 <h3>{{$t('投注成功')}},{{$t('预祝您中奖')}}</h3>
                 <p>{{$t('当前投注彩种')}}：{{typeNameTitle}}</p>
-                <p>{{$t('当前投注期数')}}：{{$t('第')}}{{preventBanner}}期</p>
+                <p>{{$t('当前投注期数')}}：{{$t('第')}}{{preventBanner}}{{$t('期')}}</p>
             </div>
             <button type="button" class="mbt mui-btn mui-btn-danger">{{$t('确认')}}</button>
         </div>

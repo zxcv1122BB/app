@@ -16,15 +16,15 @@
 					<img src="../../../assets/images/base/logo.png" alt="" style="width: 70%;">
 				</div>
 				<div class="btn">
-					<a class="go-btn go-btn1" :href="containerWapUrl">继续访问WAP手机端</a>
+					<a class="go-btn go-btn1" :href="containerWapUrl">{{$t('继续访问')}}WAP{{$t('手机端')}}</a>
 				</div>
-				<p class="tit">温馨提示：WAP手机端直接点击链接按钮访问</p>
-				<div class="wap-text">推荐您使用手机APP购彩,请选择下载 <i class="fa fa-download"></i></div>
+				<p class="tit">{{$t('温馨提示')}}：WAP{{$t('手机端直接点击链接按钮访问')}}</p>
+				<div class="wap-text">{{$t('推荐您使用手机')}}APP{{$t('购彩')}},{{$t('请选择下载')}} <i class="fa fa-download"></i></div>
 				<div class="btn min-btn">
-					<a :href="androidUrl" class="android"><i class="fa fa-android"></i><span>Android下载</span></a>
+					<a :href="androidUrl" class="android"><i class="fa fa-android"></i><span>Android{{$t('下载')}}</span></a>
 				</div>
 				<div class="btn min-btn">
-					<a :href="iPhoneUrl" class="ios"><i class="fa fa-apple"></i><span>App Store下载</span></a>
+					<a :href="iPhoneUrl" class="ios"><i class="fa fa-apple"></i><span>App Store{{$t('下载')}}</span></a>
 				</div>
 				<!--<div class="btn">-->
 					<!--<a href="https://www.jc163.cc" class="go-btn">返回PC端</a>-->

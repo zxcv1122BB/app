@@ -52,7 +52,7 @@
 <div id="app">
     <!--头部-->
     <header id="header">
-        <h1>QQ在线客服</h1>
+        <h1>QQ{{$t('在线客服')}}</h1>
         <a class="goBack mui-action-back" href="javascript:void(0)">{{$t('返回')}}</a>
     </header>
     <img :src="imgSrc" width="100%" height="100%" >

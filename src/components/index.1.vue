@@ -31,7 +31,7 @@
 							</li>
 							<li class="mui-table-view-cell" @tap='onlineCustomerServiceSkip(datas.onlineSys_config1)'>
 								<a class="mui-navigate-right">
-									在线客服
+									{{$t('在线客服')}}
 								</a>
 							</li>
 							<li class="mui-table-view-cell"  @tap='act'>
@@ -353,7 +353,7 @@
                         <path data-v-0106caec="" data-v-4e994cc4=""
                               d="M160 115.4L180.7 96 352 256 180.7 416 160 396.7 310.5 256z"></path>
                       </svg>
-                      <p>支持网银支付/支付宝/微信/QQ等支付方式</p>
+                      <p>支持网银支付/支付宝/{{$t('微信')}}/QQ等支付方式</p>
                     </div>
                   </div>
                 </div>
@@ -633,7 +633,7 @@
 								{{item.show_name}}
 							</div>
 							<div class="mui-media-right">
-								<p class="msg">距第{{item.issue}}期截止</p>
+								<p class="msg">{{$t('距第')}}{{item.issue}}{{$t('期截止')}}</p>
 								<div class="time" v-if="item.hour"><span class="hour">{{item.hour}}</span><span class="min">{{item.minute}}</span><span class="sec">{{item.second}}</span>
                  </div>
                       <p v-else>{{item.msg}}</p>
@@ -649,7 +649,7 @@
 								{{item.show_name}}
 							</div>
 							<div class="mui-media-right">
-								<p class="msg">距第{{item.issue}}期截止</p>
+								<p class="msg">{{$t('距第')}}{{item.issue}}{{$t('期截止')}}</p>
 								<div class="time" v-if="item.hour">
                         <span class="hour">{{item.hour}}</span><span class="min">{{item.minute}}</span><span class="sec">{{item.second}}</span>
                 </div>
@@ -666,7 +666,7 @@
 								{{item.show_name}}
 							</div>
 							<div class="mui-media-right">
-								<p class="msg">距第{{item.issue}}期截止</p>
+								<p class="msg">{{$t('距第')}}{{item.issue}}{{$t('期截止')}}</p>
 								<div class="time" v-if="item.hour">
                         <span class="hour">{{item.hour}}</span><span class="min">{{item.minute}}</span><span class="sec">{{item.second}}</span>
                       </div>
@@ -683,7 +683,7 @@
 								{{item.show_name}}
 							</div>
 							<div class="mui-media-right">
-								<p class="msg">距第{{item.issue}}期截止</p>
+								<p class="msg">{{$t('距第')}}{{item.issue}}{{$t('期截止')}}</p>
 								<div class="time" v-if="item.hour">
                         <span class="hour">{{item.hour}}</span><span class="min">{{item.minute}}</span><span class="sec">{{item.second}}</span>
                       </div>
@@ -700,7 +700,7 @@
 								{{item.show_name}}
 							</div>
 							<div class="mui-media-right">
-								<p class="msg">距第{{item.issue}}期截止</p>
+								<p class="msg">{{$t('距第')}}{{item.issue}}{{$t('期截止')}}</p>
 								<div class="time" v-if="item.hour">
                         <span class="hour">{{item.hour}}</span><span class="min">{{item.minute}}</span><span class="sec">{{item.second}}</span>
                       </div>
@@ -717,7 +717,7 @@
 								{{item.show_name}}
 							</div>
 							<div class="mui-media-right">
-								<p class="msg">距第{{item.issue}}期截止</p>
+								<p class="msg">{{$t('距第')}}{{item.issue}}{{$t('期截止')}}</p>
 								<div class="time" v-if="item.hour">
                         <span class="hour">{{item.hour}}</span><span class="min">{{item.minute}}</span><span class="sec">{{item.second}}</span>
                       </div>
@@ -734,7 +734,7 @@
 								{{item.show_name}}
 							</div>
 							<div class="mui-media-right">
-								<p class="msg">距第{{item.issue}}期截止</p>
+								<p class="msg">{{$t('距第')}}{{item.issue}}{{$t('期截止')}}</p>
 								<div class="time" v-if="item.hour">
                         <span class="hour">{{item.hour}}</span><span class="min">{{item.minute}}</span><span class="sec">{{item.second}}</span>
                       </div>
@@ -751,7 +751,7 @@
 								{{item.show_name}}
 							</div>
 							<div class="mui-media-right">
-								<p class="msg">距第{{item.issue}}期截止</p>
+								<p class="msg">{{$t('距第')}}{{item.issue}}{{$t('期截止')}}</p>
 								<div class="time" v-if="item.hour">
                         <span class="hour">{{item.hour}}</span><span class="min">{{item.minute}}</span><span class="sec">{{item.second}}</span>
                       </div>

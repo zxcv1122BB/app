@@ -4,7 +4,7 @@
 <div id="main">
     <!--顶部-->
     <header id="header">
-        <h1>胜负彩/任选九</h1>
+        <h1>{{$t('胜负彩')}}/{{$t('任选九')}}</h1>
         <a class="goBack" @click="routerBack" href="javascript:void(0)">{{$t('返回')}}</a>
         <!-- <img id="trigger3" src="images/date1.png" style="right: 1rem;" width="20" height="20"/> -->
     </header>
@@ -47,7 +47,7 @@
 		                <tr>
 		                    <th>{{$t('奖项')}}</th>
 		                    <th>{{$t('中奖注数')}}</th>
-		                    <th>每注金额({{coinUnit}})</th>
+		                    <th>{{$t('每注金额')}}({{coinUnit}})</th>
 		                </tr>
 		            </thead>
 		            <tbody>

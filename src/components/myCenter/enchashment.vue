@@ -8,12 +8,12 @@
 		</header>
 		<article id="article" v-cloak>
 			<section>
-				<p style="color:#fff" v-cloak>可用余额：<em>{{balanceNow}}</em>{{coinUnit}}</p>
+				<p style="color:#fff" v-cloak>{{$t('可用余额')}}：<em>{{balanceNow}}</em>{{coinUnit}}</p>
 				<p style="color:#fff" v-cloak>返点金额：<em>{{agentCoin}}</em>{{coinUnit}}</p>
 				<div class="bankMes">
 					<ul>
-						<li>银行名称：<span id="bankName"></span> </li>
-						<li>银行卡号：<span id="bankNum"></span> </li>
+						<li>{{$t('银行名称')}}：<span id="bankName"></span> </li>
+						<li>{{$t('银行卡号')}}：<span id="bankNum"></span> </li>
 					</ul>
 				</div>
 				<div class="hint">

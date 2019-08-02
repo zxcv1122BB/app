@@ -34,7 +34,7 @@
         		<li>
         			<div v-for="(it,index) in datas">
 			            <!-- <p class="inner-date divider match-divider" @click="fold(index)" :id="index" v-cloak>
-			                	第{{it[0].bannerNumber}}期 {{it[0].gameDate}} {{it.length}}场比赛已开奖
+			                	第{{it[0].bannerNumber}}期 {{it[0].gameDate}} {{it.length}}{{$t('场比赛已开奖')}}
                             <i class="match-foldBtn arrow-ico"></i>
 			            </p> -->
 			            <div class="inner-div">
