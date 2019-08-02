@@ -294,6 +294,8 @@ exports.install = function (Vue, options) {
 
         options.data.timeStamp = new Date().getTime();
 
+        options.data.lang = localStorage.getItem('lang') || 'tr';
+
         // alert(JSON.stringify(options.data));
 
         var self = this,
@@ -507,7 +509,7 @@ exports.install = function (Vue, options) {
         }
 
         options.data.timeStamp = new Date().getTime();
-
+        options.data.lang = localStorage.getItem('lang') || 'tr';
 
         var self = this;
 		// self.BASE_URL = "https://" + this.BASE_IP;
@@ -518,17 +520,17 @@ exports.install = function (Vue, options) {
 			$.ajax({
 
 				"type": p.type,
-	  
+
 				"async": p.async != undefined ? p.async : true,
-	  
+
 				"url": l + p.url,
-	  
+
 				"data": p.data,
-	  
+
 				"xhrFields": { //跨域
-	  
+
 				  withCredentials: true
-	  
+
 				},
 				//请求头部添加
 				// "headers": {
@@ -537,17 +539,17 @@ exports.install = function (Vue, options) {
 				// },
 				"complete": function complete(xhr) {
 				  //请求完成时调用的方法
-	  
+
 				  if (xhr.readyState == 4 && xhr.status == 200) {
 					//请求成功时
 					if (!xhr.responseJSON) {
 					  xhr.responseJSON = JSON.parse(xhr.responseText);
 					}
-	  
+
 					if (xhr.responseJSON.code != null && xhr.responseJSON.code == 600) {
 					  localStorage.clear();
 					  self.showPopup(xhr.responseJSON.msg, xhr.responseJSON.body);
-	  
+
 					  return;
 					} else if (xhr.responseJSON.code != null && xhr.responseJSON.code == "901") {
 					  //访问频繁
@@ -571,7 +573,7 @@ exports.install = function (Vue, options) {
 					  return
 					}
 					if (p.success) {
-	  
+
 					  p.success.call(this, xhr.responseJSON, xhr);
 					}
 					setTimeout(function () {
@@ -588,7 +590,7 @@ exports.install = function (Vue, options) {
 					}, 500);
 				  }
 				}
-	  
+
 			  });
 		}
         return reload1()

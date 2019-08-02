@@ -46,8 +46,9 @@ import './style/base/base.css'
 // import './assets/js/md5.js'
 // 通过引入fn实现调用
 
+let lang = localStorage.getItem('lang') || 'tr';
 const i18n = new VueI18n({
-  locale: 'tr',
+  locale: lang,
   messages: {
     'cn': cn,   // 中文简体语言包
     'tr': tr    // 繁体语言包

@@ -134,6 +134,7 @@ export default {
   methods:{
     checkWord (key) {
       this.$i18n.locale = key;
+      localStorage.setItem('lang', key);
     },
     init(){
       //解决触发滚动时候的点击
