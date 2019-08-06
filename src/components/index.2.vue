@@ -4,12 +4,12 @@
     <aside id="canvasSide" class="mui-off-canvas-left mui-transitioning">
 				<div id="canvasSideScroll" class="mui-scroll-wrapper">
 					<div class="mui-scroll">
-						<div class="title" style="margin-bottom: 35px;color: #007DF6;font-size: 28px;margin-top: 25px;padding-left: 12px;font-weight: 300;">SSG
+						<div class="title" style="margin-bottom: 35px;color: #007DF6;font-size: 28px;margin-top: 25px;padding-left: 12px;font-weight: 300;">{{$t('马奇朵')}}
 							彩票</div>
 						<ul class="mui-table-view mui-table-view-chevron mui-table-view-inverted">
 							<li class="mui-table-view-cell" @tap='skip_newUrl(0, "/myCenter", "")'>
 								<a class="mui-navigate-right">
-                  
+
 									会员中心
 								</a>
 							</li>
@@ -58,7 +58,7 @@
 					</div>
 				</div>
 			</aside>
-    
+
     <!--底部按钮-->
     <div class="mui-inner-wrap  mui-transitioning">
       <header id="header" v-show="baseIndex!=4" style="background-color:#242329;">
@@ -83,7 +83,7 @@
           立即下载
         </a>
       </div> -->
-      
+
       <div id="container" class="container">
             <!--轮播-->
             <!-- <div class="mui-slider" style="margin-top: 2.67rem;">
@@ -114,12 +114,12 @@
                     <li @tap="showHotArea(9,'走势')"><span class="exp">{{$t('走势')}}</span></li>
                     <li @tap="togodepositFile"><span class="exp">{{$t('充值')}}</span></li>
                     <li @tap="clickEnchash"><span class="exp">{{$t('提款')}}</span></li>
-                    
+
                     <li @tap='skip_newUrl(0, "/myCenter", "")'>
                       <span class="exp">{{$t('我的')}}</span>
                     </li>
-                    
-                    
+
+
                   </ul>
                 </div>
                   <!--支持循环，需要重复图片节点-->
@@ -136,11 +136,11 @@
         <div id="main" :class="baseIndex==2?'deep':''">
           <div id="pullrefresh">
 
-          
-              
+
+
             <div v-if="baseIndex==1" key="one" id="danmu">
               <!-- <div class="changeSkin" @tap="skin_color()"><span >切换主题</span></div> -->
-              
+
               <!--滚动信息条-->
               <div class="msg">
                 <i class="iconfont icon-gonggao laba"></i>
@@ -162,12 +162,12 @@
                     <li @tap="showHotArea(9,'走势')"><img src="../assets/images/base/zoushi.png" style="width: 40px;"><span class="exp">{{$t('走势')}}</span></li>
                     <li @tap="togodepositFile"><img src="../assets/images/base/cunkuan.png" style="width: 40px;"><span class="exp">{{$t('充值')}}</span></li>
                     <li @tap="clickEnchash"><img src="../assets/images/base/tikuan.png" style="width: 40px;"><span class="exp">{{$t('提款')}}</span></li>
-                    
+
                     <li @tap='skip_newUrl(0, "/myCenter", "")'>
                         <img src="../assets/images/base/wode.png" style="width: 40px;"><span class="exp" style="color:#fff;">{{$t('我的')}}</span>
                     </li>
-                    
-                    
+
+
                   </ul>
                 </div> -->
                 <div id="content" class="s_scroll">
@@ -251,8 +251,8 @@
 								</div>
 							</div>
               </div>
-              
-              
+
+
               <!-- <div id="allActivity">
                 <div id="biaoImg" class="biaoFalse" @tap="biaoImg">
                   <img id="biao"
@@ -262,11 +262,11 @@
                   <div class="danmuSwitch">
                     <div v-if="!danmuFlag" @tap="danMu(1)" class="open">
                       <i class="iconfont1">&#xe7bf;<span>{{$t('弹幕')}}</span></i>
-                      
+
                     </div>
                     <div v-else @tap="danMu(0)" class="close">
                       <i class="iconfont1">&#xe607;<span>{{$t('弹幕')}}</span></i>
-                      
+
                     </div>
                   </div>
                   <div class="chatMes" @tap="togoChat">
@@ -313,7 +313,7 @@
                   <a href="javascript:void(0)" class="c_2b5eb2"
                     @tap="onlineCustomerServiceSkip(datas.onlineSys_config1)">{{$t('在线客服')}}</a>
                   <a :href="downUrl?downUrl:'javascript:;'" class="c_2b5eb2" @tap="togodownload">下载APP</a>
-                 
+
                 </div>
               </div> -->
 
@@ -611,7 +611,7 @@
               </ul>
             </div> -->
 
-              
+
           </div>
 
 
@@ -631,7 +631,7 @@
         </div>
             </div>
 
-        
+
       </div>
       <div style="position: fixed;bottom: 0;left: 50%;margin-left: -45px;z-index: 10;">
 					<a href="#canvasSide" class="mui-action-menu">
@@ -652,7 +652,7 @@
           </div>
 			<div style="overflow:scroll;height:calc(100% - 70px)" class="s_scroll">
           <div class=" mui-scroll">
-          
+
           <ul v-if="hot_index<9||hot_index==19" class=" mui-table-view mui-table-view-chevron sub">
 
             <template v-if="hot_index==1">
@@ -808,8 +808,8 @@
             </li>
             </template>
           </ul>
-          <ul  v-if="hot_index==9" class=" mui-table-view f_panel"> 
-              
+          <ul  v-if="hot_index==9" class=" mui-table-view f_panel">
+
               <li class="mui-table-view-cell mui-collapse mui-active">
                 <a class="mui-navigate-right" href="javascript:void(0);">{{$t('热门')}}</a>
                 <div class="mui-collapse-content">
@@ -1045,14 +1045,14 @@
 
 
     <!--<div id="container" :class="{'container':true,'disappear':disappear}" >-->
-    
+
 
   </div>
   <div id="aWrap" @tap="popArea(2)"></div>
   <!-- <input type="file" id="file">
   <div id="qrCode"></div> -->
   </div>
-  
+
 </template>
 
 <script src="../assets/js/index.js"></script>
@@ -1077,7 +1077,7 @@
     display: none;
 }
 .mui-inner-wrap #header{
-  background: -webkit-linear-gradient(top,black,#575956); 
+  background: -webkit-linear-gradient(top,black,#575956);
 }
 .mHide{
   display: none !important;

@@ -11,9 +11,9 @@
 					<div class="cImg">
 						<div class="tit">Line{{$t('官方客服')}}</div>
 						<img src="/static/images/L.png" alt="">
-						<p class="c_gray">SSG娱乐 Line{{$t('官方客服')}} </p>
+						<p class="c_gray">{{$t('马奇朵')}}娱乐 Line{{$t('官方客服')}} </p>
 					</div>
-					
+
 				</div>
 				<!-- <iframe id="a1" name="iframe" frameborder="0" min-height="100%" width="100%" :src="url" scrolling="auto"></iframe> -->
 			</div>

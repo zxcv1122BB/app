@@ -56,7 +56,7 @@
 					}else{
 						localStorage.promotionCode = str;
 					}
-					
+
 					if(localStorage.promotionCode=='undefined'){
 						localStorage.removeItem('promotionCode');
 					}
@@ -119,19 +119,19 @@
 
 <style scoped>
 	/*-- 清除原属性 --*/
-	
+
 	html,
 	body,
 	div,
 	p {
 		box-sizing: border-box;
 	}
-	
+
 	html,
 	body {
 		height: 100%;
 	}
-	
+
 	html,
 	body,
 	div,
@@ -219,7 +219,7 @@
 		font: inherit;
 		vertical-align: baseline;
 	}
-	
+
 	html,
 	body,
 	form,
@@ -234,7 +234,7 @@
 	h6 {
 		-webkit-text-size-adjust: none;
 	}
-	
+
 	article,
 	aside,
 	details,
@@ -248,7 +248,7 @@
 	section {
 		display: block;
 	}
-	
+
 	body {
 		font-family: 'Helvetica Neue', Arial, "Hiragino Sans GB", 'Microsoft YaHei', sans-serif;
 		-webkit-touch-callout: none;
@@ -258,12 +258,12 @@
 		-o-text-size-adjust: none;
 		text-size-adjust: none
 	}
-	
+
 	a {
 		color: #666;
 		text-decoration: none;
 	}
-	
+
 	a:hover {
 		/*color: #666;*/
 		text-decoration: none;
@@ -278,18 +278,18 @@
     padding-left: 2.5rem;
     background-size: .8rem;
   }
-	
+
 	img {
 		max-width: 100%;
 	}
-	
+
 	.wrap {
 		height: 100%;
 		overflow: auto;
 		color: #999;
 		padding: 2em;
 	}
-	
+
 	.logo {
 		margin: 28px auto 18px;
 		text-align: center;
@@ -299,16 +299,16 @@
 		font-weight: 700;
 		min-height: 4rem;
 	}
-	
+
 	.btn {
 		width: 239px;
 		margin: 0 auto;
 	}
-	
+
 	.btn a {
 		display: block;
 	}
-	
+
 	.go-btn {
 		background: #e59f4d;
 		text-align: center;
@@ -316,37 +316,37 @@
 		color: #fff;
 		padding: 10px;
 	}
-	
+
 	.go-btn1 {
 		fong-size: 15%;
 		padding: 15px;
 	}
-	
+
 	.tit {
 		font-size: 80%;
 		text-align: center;
 		margin: 20px 0 40px;
 	}
-	
+
 	.wap-text {
 		text-align: center;
 		font-size: 80%;
 		padding-bottom: 10px;
 	}
-	
+
 	.min-btn {
 		margin-bottom: 2em;
 	}
-	
+
 	.min-btn .fa {
 		font-size: 2em;
 	}
-	
+
 	.min-btn span {
 		font-size: 1.4em;
 		margin-left: 0.5em;
 	}
-	
+
 	.android {
 		border: 2px solid #fff;
 		text-align: center;
@@ -355,7 +355,7 @@
 		padding: 10px;
 		background: #e59f4d;
 	}
-	
+
 	.ios {
 		border: 2px solid #fff;
 		text-align: center;
@@ -364,7 +364,7 @@
 		padding: 10px;
 		background: #242e77;
 	}
-	
+
 	.wap-foot {
 		position: fixed;
 		bottom: 0px;

@@ -1,4 +1,5 @@
 export default {
+  '马奇朵': '馬奇朵',
   'personCenter': '個人中心',
   'accountBalance': '賬號余額',
   'recharge': '充值',

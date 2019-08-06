@@ -20,14 +20,14 @@
                     </router-link>
                     </div>
         <div class="regDiv">
-            
+
             <form id="reg-form" class="mui-input-group" style="background: none;">
                 <div class="mui-input-row btn_bg">
                             <label><i class="mui-icon mui-icon-person"></i></label>
                             <input name="name" type="text" class="mui-input-clear mui-input"  v-model="userName" @keyup="userName=userName.replace(/[^\w\/]/ig,'') " placeholder="设置账户名(5-11个字符)" id="userName" data-input-clear="5"><span class="mui-icon mui-icon-clear mui-hidden"></span>
                         </div>
-                      
-                        
+
+
                         <div class="mui-input-row btn_bg">
                             <label><i class="mui-icon mui-icon-locked"></i></label>
                             <input name="password" type="password" class="mui-input-clear mui-input" v-model="password" placeholder="请输入密码(6-16个字符)" id="passWord" data-input-clear="3"><span class="mui-icon mui-icon-clear mui-hidden"></span>
@@ -39,25 +39,25 @@
                          <div class="mui-input-row btn_bg">
                             <label><i class="mui-icon mui-icon-upload"></i></label>
                             <input type="text" id="code" name="code" placeholder="推广码" v-model="promotionCode"/><span class="mui-icon mui-icon-clear mui-hidden"></span>
-                        </div>     
+                        </div>
                         <div class="mui-input-row btn_bg">
                             <label><i class="mui-icon mui-icon-navigate"></i></label>
                             <input type="text" class="mui-input" placeholder="验证码"   v-model="inputCode" id="inputCode" name="sms_code" style="width: 45%;float: left;">
                             <a id="code" class="mui-btn mui-btn-block mui-btn-primary" style="border-radius: 0 5px 5px 0;width: 35%; font-size: 12px;padding: 0;margin: 0;height: 100%;"><img :src="'data:image/png;base64,'+imgUrl" width="125" height="35" class="img_adaptive" @click="getImgcode()"/></a>
                         </div>
-                       
+
                     </form>
                     <div class="mui-content-padded">
                     <input type="button" class="mui-btn mui-btn-block mui-btn-primary reg_btnbg" @click="loginsubmit" value="注册" style="border-bottom: 0;margin:0;color:#fff;padding:.5rem;font-size: 1rem;height:3rem;border: none;border-radius:8px;" id="btn"/>
                 </div>
             <div class="phone">
-               
+
                 <div style="clear: both;"></div>
                 <div id="prompt"></div>
-                
+
             </div>
         </div>
-        
+
         <div id="fullbg"></div>
         <div id="success">
             <p><img src="../../assets/images/success.png" style="width: 5rem;"/></p>
