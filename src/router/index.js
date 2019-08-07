@@ -126,7 +126,7 @@ const router= new Router({
       path: '/agency/agencyRebateList',
       name: 'agencyRebateList',
       component: resolve => require.ensure([], () => resolve(require('@/components/agency/agencyRebateList')), 'agencyRebateList'),
-      
+
     },
     //代理中心--代理说明
     {
@@ -817,7 +817,7 @@ const router= new Router({
       path: '/ng/trend',
       name: 'trend',
       // component: trend,
-      component: resolve => require.ensure([], () => resolve(require('@/components/bet/ng/trend')), 'trend'),
+      component: resolve => require.ensure([], () => resolve(require('@/components/bet/ng/trend.vue')), 'trend'),
        beforeEnter: (to, from, next) => { if (!from.name) { next({ path: '/' }) } else { next() } }
     },
 
@@ -1032,7 +1032,7 @@ router.beforeEach((to, from, next) => {
     $("#mLoading").removeClass('hide');
   }
 
-  
+
   // $(".child-view").css({
   //   "position":"fixed",
   //   "z-index":100

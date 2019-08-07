@@ -10,7 +10,7 @@
 			<!--登录框-->
 			<div class="loginDiv">
 				<div class="head">
-					<img src="../../assets/images/base/logo.jpg">
+					<img src="../../assets/images/base/logo.png">
 				</div>
 				<div id="login" style="padding: 20px;border-radius: 10px;">
 				<form id="login-form" class="mui-input-group" style="background: none;">
