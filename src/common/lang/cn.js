@@ -1,4 +1,5 @@
 export default {
+  '合营简介': '合营简介',
   '马奇朵': '马奇朵',
   'personCenter': '个人中心',
   'accountBalance': '账号余额',

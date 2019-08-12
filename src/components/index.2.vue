@@ -62,7 +62,7 @@
     <!--底部按钮-->
     <div class="mui-inner-wrap  mui-transitioning">
       <header id="header" v-show="baseIndex!=4" style="background-color:#242329;">
-        <h1 class="header-title" v-cloak><img src="../assets/images/base/logo.png" alt=""></h1>
+        <h1 class="header-title" v-cloak><img src="../assets/images/base/logo2.png" alt=""></h1>
         <!-- <div class="logo"></div> -->
         <a href="javascript:void(0)" class="header-left" v-show="!userName" @tap="register" style="display: inherit;">{{$t('注册')}}</a>
         <a href="javascript:void(0)" class="header-right" v-show="!userName" @tap="login">{{$t('登录')}}</a>

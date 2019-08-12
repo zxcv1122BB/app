@@ -45,11 +45,16 @@
 									结果走势
 								</a>
 							</li> -->
-							<li class="mui-table-view-cell"  @click="togodownload">
-								<a class="mui-navigate-right">
-									下载 APP
-								</a>
-							</li>
+              <li class="mui-table-view-cell"  @click="togodownload">
+                <a class="mui-navigate-right">
+                  下载 APP
+                </a>
+              </li>
+              <li class="mui-table-view-cell">
+                <a class="mui-navigate-right" href="http://ssg97.webnode.tw/">
+                  {{$t('合营简介')}}
+                </a>
+              </li>
 							<!-- <li class="mui-table-view-cell">
 								<a class="mui-navigate-right" href="aaa.html">
 									关于我们
@@ -68,7 +73,7 @@
     <!--底部按钮-->
     <div class="content-wrap  mui-transitioning" :style="wStyle">
       <header id="header" v-show="baseIndex!=4" style="background-color:#242329;">
-        <h1 class="header-title" v-cloak><img src="../assets/images/base/logo.png" alt=""></h1>
+        <h1 class="header-title" v-cloak><img src="../assets/images/base/logo2.png" alt=""></h1>
         <!-- <div class="logo"></div> -->
         <a href="javascript:void(0)" class="header-left" v-show="!userName" @click="register" style="display: inherit;">{{$t('注册')}}</a>
         <a href="javascript:void(0)" class="header-right" v-show="!userName" @click="login">{{$t('登录')}}</a>

@@ -9,7 +9,7 @@
         <!-- <p class="tit"></p> -->
         <!--输入框-->
         <div class="head">
-                        <img src="../../assets/images/base/logo.png">
+                        <img src="../../assets/images/base/logo2.png">
                     </div>
             <div class="l_close"  @click="routerBack">
                         <img src="../../assets/images/base/close.png" alt="">
