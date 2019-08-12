@@ -1,5 +1,5 @@
 <template>
-  <div class="mui-fullscreen">
+  <div class="mui-fullscreen" @click="isShowLang = false">
      <div id="canvasWrapper" class="mui-off-canvas-wrap mui-draggable">
     <aside id="canvasSide" class="mui-off-canvas-left mui-transitioning">
       <!-- popArea(2); -->
@@ -126,9 +126,17 @@
                     <li @click="showHotArea(9,'走势')"><span class="exp">{{$t('走势')}}</span></li>
                     <li @click="togodepositFile"><span class="exp">{{$t('充值')}}</span></li>
                     <li @click="clickEnchash"><span class="exp">{{$t('提款')}}</span></li>
-
                     <li @click='skip_newUrl(0, "/myCenter", "")'>
                       <span class="exp">{{$t('我的')}}</span>
+                    </li>
+                    <li>
+                      <div>
+                        <span class="exp lang" @click.stop="isShowLang = !isShowLang">{{$t('语言')}}</span>
+                        <div class="check-word" v-if="isShowLang">
+                          <span @click.stop="checkWord('cn')">简体</span>
+                          <span @click.stop="checkWord('tr')">繁体</span>
+                        </div>
+                      </div>
                     </li>
 
 

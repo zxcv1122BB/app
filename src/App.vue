@@ -1,9 +1,9 @@
 <template>
   <div id="app" :class="themeStyle">
-    <ul class="chack-word">
+    <!-- <ul class="check-word">
       <li @click="checkWord('cn')">简体</li>
       <li @click="checkWord('tr')">繁体</li>
-    </ul>
+    </ul> -->
     <transition  :enter-active-class="enterActive" :leave-active-class="leaveActive">
       <!-- <transition :name="fadeActive"> -->
       <keep-alive>
@@ -132,10 +132,6 @@ export default {
 
   },
   methods:{
-    checkWord (key) {
-      this.$i18n.locale = key;
-      localStorage.setItem('lang', key);
-    },
     init(){
       //解决触发滚动时候的点击
       function stopTouchendPropagationAfterScroll(){
@@ -361,15 +357,16 @@ export default {
   color: #2c3e50;
   /* margin-top: 60px; */
 }
-#app .chack-word {
-  position: fixed;
-  z-index: 999;
-  right: 10px;
-  top: 50%;
+#app .check-word {
+  position: relative;
+  z-index: 9999999;
+  background: linear-gradient(left, black , #575956);
+  margin-top: 44px;
   color: #fff;
-  background: #3c92bd;
 }
-#app .chack-word li{
+#app .check-word span {
+  display: block;
+  width: 100%;
   box-sizing: border-box;
   padding: 5px;
 }

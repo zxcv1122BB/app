@@ -19,6 +19,7 @@ export default {
       thelotterys: [], //最近开奖记录
       thelotterySpit: [], //最近开奖记录
       getColoredLeafConfigureList: [], //彩种显示列表
+      isShowLang: false,
       variety: {
         "0": {
           list: [],
@@ -651,6 +652,11 @@ export default {
     },
 
   methods: {
+    checkWord (key) {
+      this.isShowLang = true;
+      this.$i18n.locale = key;
+      localStorage.setItem('lang', key);
+    },
     touchs_css(event){
       // event.preventDefault();
       var touch = event.targetTouches[0];
