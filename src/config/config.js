@@ -266,7 +266,7 @@ exports.install = function (Vue, options) {
       BASE_IP:'mqd188.com/lsapi',
       // BASE_IP:'ssgcp.net/lsapi',
       // BASE_IP: 'ssg168.net/lsapi1',
-      BASE_URL: "https://",
+      BASE_URL: "http://",
       WS_URL: "ws://",
       // 加密ajax,加token
       websock: "",
