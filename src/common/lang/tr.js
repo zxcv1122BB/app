@@ -1,6 +1,6 @@
 export default {
   '合营简介': '合營簡介',
-  '马奇朵': '馬奇朵',
+  '马奇朵': '瑪奇朵',
   'personCenter': '個人中心',
   'accountBalance': '賬號余額',
   'recharge': '充值',

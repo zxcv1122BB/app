@@ -10,7 +10,7 @@
 			<!--登录框-->
 			<div class="loginDiv">
 				<div class="head">
-					<img src="../../assets/images/base/logo1.png">
+					<img src="../../assets/images/base/logo2.png">
 				</div>
 				<div class="area">
 					<div class="left">
@@ -38,22 +38,22 @@
 							</div>
 							<div>
 								<!-- <a  class="mui-btn mui-btn-block mui-btn-primary login_btnbg" style="border-radius: 8px;padding: 8px 0;border: none;" id="btn" @click="clickBtn">{{$t('登录')}}</a> -->
-								<span class="loginBtn" @click="clickBtn">{{$t('登录')}}</span>				
+								<span class="loginBtn" @click="clickBtn">{{$t('登录')}}</span>
 							</div>
 						</div>
-						
-						
+
+
 					</div>
 					<div class="right" @click="togoRegister">
 						<span class="rlicon"></span>
 						<span>{{$t('注册新用户')}}</span>
 					</div>
 				</div>
-				
+
 				<div class="l_close"  @click="routerBack">
 					<img src="../../assets/images/base/close.png" alt="">
 				</div>
-				
+
 				<!-- <p>
 					<span id="user">
 						<img src="../../assets/images/user.gif" />
@@ -66,11 +66,11 @@
 					</span>
 					<input /></p> -->
 				<div class="prompt"> </div>
-				
+
 				<!--<a class="loginBtn" style="background-color: white;color: #383838;" @click="registerFree">免费试玩</a>-->
 
 
-        
+
 			</div>
 			<div id="fullbg"></div>
 			<div class="popup">

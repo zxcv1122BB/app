@@ -21,7 +21,7 @@ export default{
 		this.payConditions = JSON.parse(localStorage.getItem("numArr"));
 		this.payName = this.payConditions.compname;
 		// this.clickPay();
-		
+
 
 	},
 	mounted:function(){
@@ -136,7 +136,7 @@ export default{
 		},
 
 
-		
+
 		initData:function(){
 			$('#qrCode').find('canvas').remove();
 			var _this = this;
@@ -152,6 +152,10 @@ export default{
 				},
 				success: function(data) {
 					if(data.code==200){
+            if (data.redirect) {
+              let newWin = window.open('', '_blank');
+              newWin.document.write(data.redirect);
+            }
 						_this.paySet = true;
 						_this.ordernumber = data.ordernumber;
 						_this.paymoney = data.paymoney;
@@ -168,7 +172,7 @@ export default{
 						// });
 						_this.info=data.info;
 
-					}else{ 
+					}else{
 						_this.ordernumber = data.ordernumber;
 						_this.paymoney = data.paymoney;
 						_this.payError = data.info;

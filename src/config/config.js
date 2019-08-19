@@ -263,9 +263,10 @@ exports.install = function (Vue, options) {
 
   //请求设置
   Vue.prototype.base = {
-      //BASE_IP:'ssgcp.net/lsapi',
-      BASE_IP: 'ssg168.net/lsapi1',
-      BASE_URL: "http://",
+      BASE_IP:'mqd188.com/lsapi',
+      // BASE_IP:'ssgcp.net/lsapi',
+      // BASE_IP: 'ssg168.net/lsapi1',
+      BASE_URL: "https://",
       WS_URL: "ws://",
       // 加密ajax,加token
       websock: "",
@@ -276,8 +277,9 @@ exports.install = function (Vue, options) {
       clearId: 0,
       initData: function initData() {
         this.BASE_URL += this.BASE_IP;
-        //this.WS_URL += "ssgcp.net/ws";
-        this.WS_URL += "ssg168.net/ws";
+        this.WS_URL += "mqd188.com/ws";
+        // this.WS_URL += "ssgcp.net/ws";
+        // this.WS_URL += "ssg168.net/ws";
       },
       message: '',
       callAuthApi: function callAuthApi(options) {
@@ -378,7 +380,7 @@ exports.install = function (Vue, options) {
             //请求头部添加
             // "headers": {
             //   isApp: 1,
-            //   // Referer: "http://198.44.243.23:8899/"
+            //   // Referer: "https://198.44.243.23:8899/"
             // },
             "xhrFields": {
 
@@ -812,7 +814,7 @@ exports.install = function (Vue, options) {
           token,
           userType;
         //获取ip地址
-        $.getScript('http://pv.sohu.com/cityjson?ie=utf-8', function () {
+        $.getScript('https://pv.sohu.com/cityjson?ie=utf-8', function () {
           ip = returnCitySN["cip"];
           username = localStorage.userName;
           token = localStorage.access_token.split(' ')[1];
