@@ -263,7 +263,7 @@ exports.install = function (Vue, options) {
 
   //请求设置
   Vue.prototype.base = {
-      BASE_IP:'mqd188.com/lsapi',
+      BASE_IP:'mqd188.com/lsapi1',
       // BASE_IP:'ssgcp.net/lsapi',
       // BASE_IP: 'ssg168.net/lsapi1',
       BASE_URL: "http://",
