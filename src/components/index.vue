@@ -81,7 +81,7 @@
         <a href="javascript:void(0)" class="loginOut" v-if="userName" @click="loginOut">{{$t('退出')}}</a>
       </header>
 
-      <div class="download-wrap" v-if="appDownloadShow==1&&!app_flag">
+      <div class="download-wrap" v-if="false && appDownloadShow==1&&!app_flag">
         <a class="close" @click="DownloadShow">×</a>
         <div class="info" @click="togodownload">
             <div class="logo" style="width:100%;height:100%;" v-if="logoPic!=''"><img :src="logoPic"/></div>
@@ -143,16 +143,13 @@
                   </ul>
                 </div>
                   <!--支持循环，需要重复图片节点-->
-            <div class="slider" style="z-index: 1;" >
+            <!-- <div class="slider" style="z-index: 1;" >
 							<ul class="slider-main">
 								<li :key="index" v-for='(item,index) in imgs' @click="click_href(item.destinationUrl,item.title)">
 									<img :src="item.picture_url" alt="">
 								</li>
-								<!-- <li>
-									<img src="../assets/images/2.png" alt="">
-								</li> -->
 							</ul>
-						</div>
+						</div> -->
         <div id="main" :class="baseIndex==2?'deep':''">
           <div id="pullrefresh">
 
