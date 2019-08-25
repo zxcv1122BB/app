@@ -138,6 +138,9 @@
                         </div> -->
                       </div>
                     </li>
+                    <li>
+                      <a href="https://www.iqiyi.com/" class="exp"><i class='video-icon'></i>{{$t('影音')}}</a>
+                    </li>
 
 
                   </ul>
@@ -654,7 +657,7 @@
 					<!-- <a href="#canvasSide" class="mui-action-menu">
 						<img src="static/images/gengduo.png" style="width: 90px;margin-bottom: -4px;">
 					</a> -->
-          <a @click="popArea(1)" class="mui-action-menu">
+          <a @click.stop="popArea(1)" class="mui-action-menu">
 						<img src="static/images/gengduo.png" style="width: 90px;margin-bottom: -4px;">
 					</a>
 				</div>
