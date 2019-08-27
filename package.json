@@ -19,6 +19,7 @@
     "style-loader": "^0.21.0",
     "vue": "^2.5.2",
     "vue-clipboard2": "^0.1.1",
+    "vue-i18n": "^8.14.0",
     "vue-router": "^3.0.1",
     "vue-social-share": "0.0.3",
     "vue-ydui": "^1.2.2",
