@@ -353,8 +353,15 @@ export default {
         return
       }
       $(" .refresh").addClass("isClick");
-      this.getHistoryBannerInfo();
-      this.get_userState();
+      // this.getHistoryBannerInfo();
+      // this.get_userState();
+      //刷新当前路由
+      this.$router.replace({
+        path:this.$route.path,
+        query: {
+          t: Date.now()
+        }
+      })
       $(" .refresh").css({
         "transition": "transform 1s linear",
         "transform": "rotate(360deg)",
