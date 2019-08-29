@@ -10,7 +10,7 @@
 				<div class="content">
 					<div class="cImg">
 						<div class="tit">Line{{$t('官方客服')}}</div>
-						<img src="/static/images/M.png" alt="">
+						<img src="/static/images/IMG_9849.png" alt="">
 						<p class="c_gray">{{$t('马奇朵')}}娱乐 Line{{$t('官方客服')}} </p>
 					</div>
 

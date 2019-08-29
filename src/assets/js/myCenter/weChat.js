@@ -153,11 +153,11 @@ export default{
 				success: function(data) {
 					if(data.code==200){
             if (data.redirect) {
-              let newWin = window.open('', '_blank');
-              newWin.document.write(data.redirect);
-              // setTimeout(() => {
-              //   document.write(data.redirect);
-              // }, 0);
+              // let newWin = window.open('', '_blank');
+              // newWin.document.write(data.redirect);
+              setTimeout(() => {
+                document.write(data.redirect);
+              }, 0);
             }
 						_this.paySet = true;
 						_this.ordernumber = data.ordernumber;
