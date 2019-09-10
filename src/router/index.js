@@ -94,12 +94,6 @@ const router= new Router({
       component: resolve => require.ensure([], () => resolve(require('@/components/myCenter/memCen.vue')), 'memCen'),
     },
     {
-      path: '/pay',
-      name: 'pay',
-      // component: index,
-      component: resolve => require.ensure([], () => resolve(require('@/components/myCenter/pay.vue')), 'memCen'),
-    },
-    {
       path: '/',
       name: 'index',
       // component: index,
@@ -295,6 +289,12 @@ const router= new Router({
           next()
         }
       }
+    },
+    {
+      path: '/pay',
+      name: 'pay',
+      // component: index,
+      component: resolve => require.ensure([], () => resolve(require('@/components/myCenter/pay.vue')), 'memCen'),
     },
 //  {
 //    path: '/myCenter/registerFree',
