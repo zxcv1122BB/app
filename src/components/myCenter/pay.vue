@@ -9,7 +9,7 @@
         let redirect = localStorage.getItem('pay');
         localStorage.removeItem('pay')
         if (!redirect) {
-          this.$router.push({name: 'depositFile'});
+          this.$router.back(-2);
         }else{
           document.write(decodeURIComponent(redirect));
         }
