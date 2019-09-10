@@ -15,7 +15,7 @@
                       v-clipboard:success="onCopy"
                       v-clipboard:error="onError" class="copy" style="color: white;">{{$t('复制')}}</span></p>
                 <div class="money" ><p>　 {{$t('充值金额')}}：<span v-cloak>{{paymoney}}{{coinUnit}}</span></p></div>
-                <div class="qrCode" v-show="paySet" style="width: 90%;left: 5%;">
+                <div class="qrCode" v-show="paySet&&info.account" style="position: absolute;width: 90%;left: 5%;">
                   <!-- <div id="qrCode"></div> -->
                   <div style="text-align:left;" v-if="payConditions.payment_mode==5">
                     <p style="padding:0;">　{{$t('付款码')}}：<span v-cloak style="color:#e4393c;">{{info.account}}</span>

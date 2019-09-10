@@ -34,21 +34,21 @@ export default{
 	//利用ajax来查询记录列表
 	methods: {
     //路由跳转返回
-        routerBack: function () {
-          if (localStorage.turnPathName && localStorage.turnPathName!="login"){
-            // this.$router.push({ name: localStorage.turnPathName });
-            this.$router.go(-1)
-          }else{
-            this.$router.push({ name: "index" });
-          }
+		routerBack: function () {
+			if (localStorage.turnPathName && localStorage.turnPathName!="login"){
+				// this.$router.push({ name: localStorage.turnPathName });
+				this.$router.go(-1)
+			}else{
+				this.$router.push({ name: "index" });
+			}
 
-        },
+		},
 		onCopy: function (e) {
-		      mui.toast('复制成功');
-		    },
-		    onError: function (e) {
-		      mui.toast('复制失败');
-		    },
+			mui.toast('复制成功');
+		},
+		onError: function (e) {
+			mui.toast('复制失败');
+		},
 		//查询数据
 		clickPay: function() {
 			var _this = this;
@@ -157,15 +157,16 @@ export default{
 				success: function(data) {
 					if(data.code==200){
             if (data.redirect) {
-              // let newWin = window.open('', '_blank');
-              // newWin.document.write(data.redirect);
-              localStorage.setItem('pay', encodeURIComponent(data.redirect));
-              setTimeout(() => {
-                // location.href = location.href.split('/#/')[0] + '/#/pay?' + encodeURIComponent(data.redirect);
-                _this.iframeHeight = document.body.offsetHeight;
-                _this.iframeSrc = location.href.split('/#/')[0] + '/#/pay?';
-                _this.showIframe = true;
-              }, 1000);
+							// let newWin = window.open('', '_blank');
+							// 	newWin.document.write(data.redirect);
+							localStorage.setItem('pay', encodeURIComponent(data.redirect));
+							document.location.href  = location.href.split('/#/')[0] + '/#/pay?';;
+              // setTimeout(() => {
+              //   // location.href = location.href.split('/#/')[0] + '/#/pay?' + encodeURIComponent(data.redirect);
+              //   _this.iframeHeight = document.body.offsetHeight;
+              //   _this.iframeSrc = location.href.split('/#/')[0] + '/#/pay?';
+              //   _this.showIframe = true;
+              // }, 1000);
             }
 						_this.paySet = true;
 						_this.ordernumber = data.ordernumber;
