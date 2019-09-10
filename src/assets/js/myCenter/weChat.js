@@ -14,6 +14,10 @@ export default{
 			payError:'',
 			paySet:false,
 			payName:'',
+      showIframe: false,
+      iframeSrc: '',
+      iframeHeight: 100,
+			info:{}
 		}
 	},
 	created: function() {
@@ -155,9 +159,13 @@ export default{
             if (data.redirect) {
               // let newWin = window.open('', '_blank');
               // newWin.document.write(data.redirect);
+              localStorage.setItem('pay', encodeURIComponent(data.redirect));
               setTimeout(() => {
-                document.write(data.redirect);
-              }, 0);
+                // location.href = location.href.split('/#/')[0] + '/#/pay?' + encodeURIComponent(data.redirect);
+                _this.iframeHeight = document.body.offsetHeight;
+                _this.iframeSrc = location.href.split('/#/')[0] + '/#/pay?';
+                _this.showIframe = true;
+              }, 1000);
             }
 						_this.paySet = true;
 						_this.ordernumber = data.ordernumber;

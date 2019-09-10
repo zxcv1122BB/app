@@ -689,7 +689,7 @@
             // padding-left: 1rem;
             // height: 10rem;
             overflow: scroll;
-            max-height: 300px;
+            max-height: 40vh;
             // background-color: #3ea7a5;
 
             >div{
@@ -783,6 +783,7 @@
             // padding-left: 1rem;
             // height: 10rem;
             overflow-y: auto;
+            max-height: 40vh;
             // background-color: #3ea7a5;
             .coin{
                 input{

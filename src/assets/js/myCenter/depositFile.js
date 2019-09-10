@@ -257,6 +257,11 @@ export default {
 		//			this.base.callAuthApi(getUserInfo);
 		//		},
 		clickNav: function(ways, index) {
+			console.log(ways,index)
+			if(ways.id == 5){
+				this.$router.push('/myCenter/usdt');
+				return
+			}
 			$(".nav").eq(index).addClass('navYes').siblings().removeClass('navYes');
 			this.ways = ways;
 			this.clickPay(1);

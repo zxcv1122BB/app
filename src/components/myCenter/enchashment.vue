@@ -27,6 +27,7 @@
 				<div> 
 					<p v-cloak>提款需达投注量：<em v-cloak>{{isTrue.withdrawNeedSum}}</em>{{coinUnit}}</p>
 					<p v-cloak>已达投注量：<em v-cloak>{{isTrue.betsum}}</em>{{coinUnit}}</p>
+					<p v-cloak v-if="Number(agentCoin)>=config.drawingSumlowerLimit" style="color:red;">在返点金额范围内提现，无需打码量 </p>
 				</div>
 				<form>
 					<p><input  type="number" pattern="[0-9]*" placeholder="请输入提现金额（只能输入数字）" @keyup="getNum()" v-model="cash"  style="    background-color: gainsboro;    margin-top: 10px;"/></p>

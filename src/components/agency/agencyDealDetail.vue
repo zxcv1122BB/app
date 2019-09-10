@@ -896,6 +896,7 @@ export default {
 .showRecordData{
   /* background: #fff; */
   background: #424242;
+  padding-bottom: 3rem;
 }
 .fullPageMsg {
     text-align: center;

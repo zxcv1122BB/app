@@ -103,9 +103,9 @@
                       v-cloak
                     >支付限额:{{ways.min_money}}{{coinUnit}}-{{ways.max_money}}{{coinUnit}}</li>
                   </ul>
-                  <ul>
+                  <!-- <ul>
                     <div style="padding: 20px 0;padding-left: 1rem;color: #fff;font-size: 1rem;"><span>{{$t('数字货币充值请联系客服')}}</span></div>
-                  </ul>
+                  </ul> -->
                   <!-- <p class="payBtn">
                     <input type="button" value="下一步" @click="clickPay(1)">
                   </p> -->

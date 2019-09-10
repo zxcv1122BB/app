@@ -50,11 +50,11 @@
                   下载 APP
                 </a>
               </li>
-              <li class="mui-table-view-cell">
+              <!-- <li class="mui-table-view-cell">
                 <a class="mui-navigate-right" href="http://ssg97.webnode.tw/">
                   {{$t('合营简介')}}
                 </a>
-              </li>
+              </li> -->
 							<!-- <li class="mui-table-view-cell">
 								<a class="mui-navigate-right" href="aaa.html">
 									关于我们
@@ -640,7 +640,7 @@
         <div id="popNotice" class="hide " v-cloak>
           <div class="wrap" @click="hidePopupNotice()"></div>
           <div class="tit">{{$t('系统公告')}}<span class="close iconfont1" @click="hidePopupNotice()">&#xe605;</span></div>
-          <div class="popContent">
+          <div class="popContent" style="overflow:auto;">
 
             <div class="title">{{popupNotice?popupNotice.title:''}}</div>
             <div class="content" v-html="popupNotice?popupNotice.content:''" style="padding-bottom: 1rem">

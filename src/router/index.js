@@ -94,6 +94,12 @@ const router= new Router({
       component: resolve => require.ensure([], () => resolve(require('@/components/myCenter/memCen.vue')), 'memCen'),
     },
     {
+      path: '/pay',
+      name: 'pay',
+      // component: index,
+      component: resolve => require.ensure([], () => resolve(require('@/components/myCenter/pay.vue')), 'memCen'),
+    },
+    {
       path: '/',
       name: 'index',
       // component: index,
@@ -1001,6 +1007,22 @@ const router= new Router({
       name: "lose",
       // component: transfer ,
       component: resolve => require.ensure([], () => resolve(require('@/components/tab/sundry/lose')), 'lose'),
+      beforeEnter: (to, from, next) => { if (!from.name) { next({ path: '/' }) } else { next() } }
+    },
+    //ustd充值usdtRecord
+    {
+      path: "/myCenter/usdt",
+      name: "ustd",
+      // component: transfer ,
+      component: resolve => require.ensure([], () => resolve(require('@/components/myCenter/usdt')), 'usdt'),
+      beforeEnter: (to, from, next) => { if (!from.name) { next({ path: '/' }) } else { next() } }
+    },
+    //ustd充值记录
+    {
+      path: "/myCenter/usdtrecord",
+      name: "usdtrecord",
+      // component: transfer ,
+      component: resolve => require.ensure([], () => resolve(require('@/components/myCenter/usdtRecord')), 'usdtrecord'),
       beforeEnter: (to, from, next) => { if (!from.name) { next({ path: '/' }) } else { next() } }
     },
     //     {

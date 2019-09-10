@@ -1964,7 +1964,7 @@ export default {
           pageSize: 10
         },
         bulletin = {
-          type: "get",
+          type: "post",
           data: data,
           dataType: "json",
           url: "/commonAPI/bulletin/selectBySysBulletin",

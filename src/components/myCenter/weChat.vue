@@ -54,7 +54,7 @@
                 <div id="error" v-if="paySet==false" style="text-align:center">{{payError}}</div>
               </div>
               <p style="position:absolute;bottom:2%;width:100%;"  class="payBtn" v-if="paySet==true"><input type="button" value="已完成支付"  @click="clickSure()"/></p>
-              
+
             </section>
             <section>
               <div class="payError" v-cloak>
@@ -66,6 +66,7 @@
             </section>
         </article>
       </div>
+      <iframe :style="{'background': '#fff'}" v-if="showIframe" :src="iframeSrc" frameborder="0" width="100%" :height="iframeHeight"></iframe>
     </div>
   </div>
 </template>

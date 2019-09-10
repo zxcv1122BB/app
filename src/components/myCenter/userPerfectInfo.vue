@@ -61,7 +61,7 @@
 						
 						<!-- <input v-if="bankPrivacyStatus" disabled="true" type="text" placeholder="请输入省市区(县)" id="bankAddress" v-model="bankAddress" />
 						<input v-else type="text" @change="bankAddress_validate()" placeholder="请输入省市区(县)" id="bankAddress" v-model="bankAddress" /> -->
-							<input type="text" @change="bankAddress_validate()" placeholder="请输入省市区(县)" id="bankAddress" v-model="bankAddress" />
+							<input type="text" @change="bankAddress_validate()" placeholder="請輸入分行名稱" id="bankAddress" v-model="bankAddress" />
 					
 					</em>
 				</label></li>

@@ -459,7 +459,10 @@ export default {
   background: url(../../assets/images/base/black_bg.png)no-repeat ;
   background-size: 100% 100%;
   .main{
-    margin-top: 2.67rem;
+    margin-top: 3.4rem;
+    height: calc(~'100vh - 3.4rem');
+    overflow: auto;
+    padding-bottom: 5rem;
    .list-item{
     //  background: rgba(255, 255, 255, .6)
    }

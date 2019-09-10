@@ -975,6 +975,9 @@ export default {
 }
 
 /* 中心列表 */
+.showRecordData{
+  padding-bottom: 3rem;
+}
 .showRecordData ul{
   margin-left: 1rem;
 }

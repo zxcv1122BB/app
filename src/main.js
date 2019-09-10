@@ -56,7 +56,6 @@ const i18n = new VueI18n({
   silentTranslationWarn: true
 })
 
-console.log(require('./common/lang/cn.js'), '==============');
 
 
 Vue.config.productionTip = false

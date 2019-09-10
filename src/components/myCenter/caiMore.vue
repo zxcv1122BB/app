@@ -15,7 +15,7 @@
               
               <div>
                 <p>第{{datas.actionIssue}}期</p>
-                <p>盈亏 <span class="coin">{{!datas.openNo?'--':parseFloat(datas.bonus)>parseFloat(datas.amount)?"+¥"+(parseFloat(datas.bonus)-parseFloat(datas.amount)).toFixed(2):"-¥"+(parseFloat(datas.amount)-parseFloat(datas.bonus)).toFixed(2)}}</span></p>
+                <p>盈亏 <span class="coin">{{!datas.openNo?'--':parseFloat(datas.bonus)>parseFloat(datas.amount)?"+ NT "+(parseFloat(datas.bonus)-parseFloat(datas.amount)).toFixed(2):"-¥"+(parseFloat(datas.amount)-parseFloat(datas.bonus)).toFixed(2)}}</span></p>
               </div>
               <div :class="datas.isCal==1&&datas.status==1?'bicon suc':'bicon fal'">
                 <span v-if="!(datas.isCal==1&&datas.status==1)">

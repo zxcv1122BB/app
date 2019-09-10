@@ -75,7 +75,7 @@
 					<div v-for="(item,index) in datas" :key="index" :class="item.isCal==1&&item.status==1?'suc isclick':'fal isclick'" v-cloak @click='skip(item)'>
 						<ul>
 							<li><span style="font-size:1.2rem;">{{item.gameName}}</span></li>
-							<li><span style="color:rgb(172, 172, 172);margin-right:1.5rem;font-size:.9rem;">{{item.playedName+"-"+item.groupName}}</span><span class="coin">¥{{item.amount}}</span></li>
+							<li><span style="color:rgb(172, 172, 172);margin-right:1.5rem;font-size:.9rem;">{{item.playedName+"-"+item.groupName}}</span><span class="coin">NT {{item.amount}}</span></li>
 							<li><span style="color:rgb(172, 172, 172);font-size:.9rem;" v-cloak>{{item.actionTime}}</span></li>
 						</ul>
 						<!-- <ul>
@@ -86,7 +86,7 @@
 						<ul>
 							<!-- <li v-cloak>{{$t('投注金额')}}：<span v-cloak>{{item.amount}}</span>{{coinUnit}}</li> -->
 							<li style="margin-top: 2rem;">
-								<span v-if="item.isCal==1&&item.status==1" class="coin">+¥{{item.bonus}}</span>
+								<span v-if="item.isCal==1&&item.status==1" class="coin">+NT {{item.bonus}}</span>
 								<!-- <span v-if="item.isCal==1&&item.status==1" class="coin">+¥{{item.bonus}}<em v-if="item.type!=2">{{coinUnit}}</em></span> -->
 								<span v-else-if="item.isCal==0"  style="color: #000;position: absolute;width: 4rem;font-size: .7rem;top: .15rem;right: 0;" v-cloak>{{item.status==2?"已撤单":"未开奖"}}</span>
 								<span v-else-if="item.isCal==2" style="color: #000;position: absolute;width: 4rem;font-size: .6rem;top: .2rem;right: 0;">{{$t('开奖失败')}}</span>
