@@ -157,10 +157,10 @@ export default{
 				success: function(data) {
 					if(data.code==200){
             if (data.redirect) {
-							// let newWin = window.open('', '_blank');
-							// 	newWin.document.write(data.redirect);
-							localStorage.setItem('pay', encodeURIComponent(data.redirect));
-							document.location.href  = location.href.split('/#/')[0] + '/#/pay?';;
+								let newWin = window.open('', '_blank');
+								newWin.document.write(data.redirect);
+							// localStorage.setItem('pay', encodeURIComponent(data.redirect));
+							// document.location.href  = location.href.split('/#/')[0] + '/#/pay?';
               // setTimeout(() => {
               //   // location.href = location.href.split('/#/')[0] + '/#/pay?' + encodeURIComponent(data.redirect);
               //   _this.iframeHeight = document.body.offsetHeight;

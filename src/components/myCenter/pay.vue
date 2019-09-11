@@ -8,7 +8,7 @@
       let redirect = localStorage.getItem('pay');
       localStorage.removeItem('pay')
       setTimeout(() => {
-        if (!redirect) {
+        if(!redirect){
           this.$router.push('/');
         }else{
           document.write(decodeURIComponent(redirect));
