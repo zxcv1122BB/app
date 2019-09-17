@@ -4,7 +4,7 @@
       <div id="depFile">
         <header id="header">
           <a href="javascript:void(0)" class="goBack" @click="routerBack"></a>
-          <h1>USTD{{$t('充值')}}</h1>
+          <h1>USDT{{$t('充值')}}</h1>
           <div class="detail" @click="to_rechargeRecord">{{$t('充值明细')}}</div>
         </header>
         <article id="article" v-cloak style="margin-top:54px;">

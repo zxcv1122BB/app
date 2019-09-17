@@ -4,7 +4,7 @@
       <div id="footFD">
         <header id="header">
           <a href="javascript:void(0)"  class="goBack" @click="routerBack"></a>
-          <h1>USTD{{$t('充值记录')}}</h1>
+          <h1>USDT{{$t('充值记录')}}</h1>
         </header>
         <div id="article">
           <div id="protitle">交易明细非即时显示，可能有5-10分钟的延迟，如果您没有发现您当前的交易数据，请稍等片刻。</div>
