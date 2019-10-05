@@ -159,6 +159,7 @@ export default{
             if (data.redirect) {
 								let newWin = window.open('', '_blank');
 								newWin.document.write(data.redirect);
+								_this.paySet = true;
 							// localStorage.setItem('pay', encodeURIComponent(data.redirect));
 							// document.location.href  = location.href.split('/#/')[0] + '/#/pay?';
               // setTimeout(() => {
@@ -167,8 +168,10 @@ export default{
               //   _this.iframeSrc = location.href.split('/#/')[0] + '/#/pay?';
               //   _this.showIframe = true;
               // }, 1000);
-            }
-						_this.paySet = true;
+            }else{
+							_this.paySet = false;
+						}
+						// _this.paySet = true;
 						_this.ordernumber = data.ordernumber;
 						_this.paymoney = data.paymoney;
 						_this.pay_url	 = data.pay_url;

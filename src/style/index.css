@@ -3487,6 +3487,7 @@ body.oneShopping {
   left: .5rem;
   top: 50%;
   margin-top:-.75rem;
+  z-index: 9;
 }
 
 .download-wrap .info{

@@ -81,15 +81,17 @@
         <a href="javascript:void(0)" class="loginOut" v-if="userName" @click="loginOut">{{$t('退出')}}</a>
       </header>
 
-      <div class="download-wrap" v-if="false && appDownloadShow==1&&!app_flag">
+      <div class="download-wrap" v-if="appDownloadShow==1&&!app_flag">
         <a class="close" @click="DownloadShow">×</a>
         <div class="info" @click="togodownload">
-            <div class="logo" style="width:100%;height:100%;" v-if="logoPic!=''"><img :src="logoPic"/></div>
+            <div class="logo" style="width:100%;height:100%;" v-if="logoPic!=''">
+              <img :src="logoPic" style="position: absolute;width: 100%;height: 100%;left:0;padding-left: 1rem;top: 0;z-index:1;" />
+            </div>
             <div class="logo" v-else></div>
         </div>
-          <!-- <div>
+        <!-- <div>
             <h3>{{webName}}</h3>
-            <p>下载手机APP,多重好礼等你拿!</p></div>
+            <p>下载手机APP,多重好礼等你拿!</p>
         </div>
         <a class="download" @click="togodownload">
           立即下载

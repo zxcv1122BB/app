@@ -51,9 +51,15 @@
                   <!-- <p>截图保存二维码,</p>
                   <p>并打开{{payName}}扫一扫完成支付。</p> -->
                 </div>
+                <div class="tips">
+                  <p style="color:red;">溫馨提示：</p>
+                  <p>如你手机是Android：請點擊重新獲取支付，如無法跳轉至充值介面，請聯繫客服，為您協助處理。</p>
+                  <p>如你手机为ios :  請至手機設定，關閉阻擋彈出視窗，如無法跳轉至充值介面，請聯繫客服，為您協助處理。</p>
+                </div>
                 <div id="error" v-if="paySet==false" style="text-align:center">{{payError}}</div>
               </div>
               <p style="position:absolute;bottom:2%;width:100%;"  class="payBtn" v-if="paySet==true"><input type="button" value="已完成支付"  @click="clickSure()"/></p>
+              <p style="position:absolute;bottom:2%;width:100%;"  class="payBtn" v-else><input type="button" value="重新獲取支付"  @click="initData()"/></p>
 
             </section>
             <section>
@@ -74,3 +80,10 @@
 <script src="../../assets/js/myCenter/weChat.js"></script>
 
 <style src="../../style/myCenter/centerGlobal.css" scoped></style>
+<style>
+  .tips{
+    font-size :14px;
+    padding: 0 20px;
+    color: #9e9e9e;
+  }
+</style>

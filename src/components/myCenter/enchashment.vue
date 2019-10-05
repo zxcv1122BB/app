@@ -51,18 +51,18 @@
 <script src="../../assets/js/myCenter/enchashment.js"></script>
 
 <style src="../../style/myCenter/centerGlobal.css" scoped></style>
-<style scoped>
+<style >
 	#enchash .yd-keyboard {
-		height: 20rem;
+		height: 24.5rem;
 	}
 
 	#enchash .yd-keyboard-numbers>li>a {
-		height: 2.8rem;
-		font-size: 1.2rem;
+		height: 3.5rem;
+		font-size: 1.5rem;
 	}
 
 	#enchash .yd-keyboard-password li {
-		height: 2.5rem;
+		height: 3rem;
 	}
 
   #enchash 	.yd-keyboard-head {
@@ -71,16 +71,21 @@
 
 	#enchash .yd-keyboard-head strong {
 		font-size: 1.2rem;
+		height: 2rem;
 	}
 
 	#enchash .yd-keyboard-error,
 	#enchash .yd-keyboard-title {
-		height: 1.5rem;
-		line-height: 1.5rem;
+		height: 2.5rem;
+		line-height: 2.5rem;
+	}
+	#enchash .yd-keyboard-title::before{
+		font-size: 1rem;
 	}
 
-	#enchash .yd-keyboard-error {
-		font-size: .8rem;
+	#enchash .yd-keyboard-error,
+	#enchash .yd-keyboard-title {
+		font-size: 1rem;
 	}
 
 	#enchash .yd-btn-primary {

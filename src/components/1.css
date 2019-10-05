@@ -171,7 +171,8 @@
   border-radius: 50%;
   position: absolute;
   left: .13333rem;
-  top: -.26667rem
+  top: -.26667rem;
+  z-index: 9;
 }
 
 .download-wrap .info[data-v-3e9d5e90] {
